@@ -3,429 +3,605 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
   <title>Golden Lake — Mirobod tumanida Comfort Plus xonadonlar</title>
-  <meta name="description" content="Golden Lake — Mirobod tumanida Comfort Plus xonadonlar. Barcha xonadonlar uchun 30% chegirma." />
+
+  <meta
+    name="description"
+    content="Golden Lake — Mirobod tumanida Comfort Plus xonadonlar. Barcha xonadonlar uchun 30% chegirma."
+  />
 
   <style>
-    :root{
-      --bg:#fbfaf7;
-      --text:#121827;
-      --muted:#6f7682;
-      --gold:#c9903f;
-      --gold2:#e6bd77;
-      --line:#eadbc4;
-      --card:#ffffff;
+    :root {
+      --bg: #fbfaf7;
+      --text: #121827;
+      --muted: #6f7682;
+      --gold: #c9903f;
+      --gold2: #e6bd77;
+      --line: #eadbc4;
+      --card: #ffffff;
     }
 
-    *{box-sizing:border-box}
-
-    html{scroll-behavior:smooth}
-
-    body{
-      margin:0;
-      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:var(--bg);
-      color:var(--text);
+    * {
+      box-sizing: border-box;
     }
 
-    .wrap{
-      width:min(1180px, calc(100% - 32px));
-      margin:0 auto;
+    html {
+      scroll-behavior: smooth;
     }
 
-    header{
-      height:76px;
-      display:flex;
-      align-items:center;
+    body {
+      margin: 0;
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      background: var(--bg);
+      color: var(--text);
     }
 
-    .nav{
-      width:100%;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
+    button,
+    input {
+      font: inherit;
     }
 
-    .brand{
-      font-size:30px;
-      line-height:1;
-      font-weight:800;
-      letter-spacing:-0.04em;
+    .wrap {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
     }
 
-    .brand span{
-      color:var(--gold);
+    /* HEADER */
+
+    header {
+      height: 76px;
+      display: flex;
+      align-items: center;
     }
 
-    .lang{
-      font-size:14px;
-      font-weight:700;
-      color:var(--muted);
-      white-space:nowrap;
+    .nav {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
     }
 
-    .lang b{
-      color:var(--gold);
+    .brand {
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: -0.04em;
     }
 
-    main{
-      padding:14px 0 44px;
+    .brand span {
+      color: var(--gold);
     }
 
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.08fr .92fr;
-      gap:34px;
-      align-items:start;
+    .lang {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--muted);
+      white-space: nowrap;
     }
 
-    .offer-badge{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:9px 14px;
-      border:1px solid var(--gold2);
-      border-radius:999px;
-      font-weight:800;
-      color:#94611d;
-      background:#fffaf1;
-      margin-bottom:18px;
+    .lang b {
+      color: var(--gold);
     }
 
-    h1{
-      margin:0;
-      font-size:clamp(48px, 5.3vw, 78px);
-      line-height:.95;
-      letter-spacing:-.055em;
-      max-width:720px;
+    /* MAIN */
+
+    main {
+      padding: 14px 0 44px;
     }
 
-    h1 .accent{
-      color:var(--gold);
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: start;
     }
 
-    .sub{
-      margin:22px 0 8px;
-      font-size:24px;
-      line-height:1.2;
-      font-weight:800;
+    /* OFFER */
+
+    .offer-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 9px 14px;
+
+      border: 1px solid var(--gold2);
+      border-radius: 999px;
+
+      font-weight: 800;
+      color: #94611d;
+
+      background: #fffaf1;
+
+      margin-bottom: 18px;
     }
 
-    .micro{
-      margin:0 0 22px;
-      color:var(--muted);
-      font-size:16px;
+    /* HEADLINE */
+
+    h1 {
+      margin: 0;
+
+      font-size: clamp(48px, 5.3vw, 78px);
+      line-height: 0.95;
+
+      letter-spacing: -0.055em;
+
+      max-width: 720px;
     }
 
-    .visual{
-      position:relative;
-      overflow:hidden;
-      border-radius:28px;
-      min-height:420px;
-      background:#d7dce2;
-      box-shadow:0 18px 50px rgba(33,26,16,.10);
+    h1 .accent {
+      color: var(--gold);
     }
 
-    .visual img{
-      width:100%;
-      height:100%;
-      min-height:420px;
-      object-fit:cover;
-      display:block;
+    .sub {
+      margin: 22px 0 8px;
+
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 800;
     }
 
-    .visual:after{
-      content:"";
-      position:absolute;
-      inset:auto 0 0 0;
-      height:46%;
-      background:linear-gradient(transparent, rgba(0,0,0,.54));
-      pointer-events:none;
+    .micro {
+      margin: 0 0 22px;
+
+      color: var(--muted);
+      font-size: 16px;
     }
 
-    .visual-copy{
-      position:absolute;
-      left:22px;
-      right:22px;
-      bottom:20px;
-      z-index:2;
-      color:#fff;
+    /* HERO IMAGE */
+
+    .visual {
+      position: relative;
+      overflow: hidden;
+
+      border-radius: 28px;
+
+      min-height: 420px;
+
+      background: #d7dce2;
+
+      box-shadow:
+        0 18px 50px rgba(33, 26, 16, 0.10);
     }
 
-    .visual-copy strong{
-      display:block;
-      font-size:22px;
-      margin-bottom:4px;
+    .visual img {
+      width: 100%;
+      height: 100%;
+
+      min-height: 420px;
+
+      object-fit: cover;
+      display: block;
     }
 
-    .visual-copy span{
-      font-size:14px;
-      opacity:.9;
+    .visual::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      height: 46%;
+
+      background:
+        linear-gradient(
+          transparent,
+          rgba(0, 0, 0, 0.54)
+        );
+
+      pointer-events: none;
     }
 
-    .stats{
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:12px;
-      margin:16px 0 0;
+    .visual-copy {
+      position: absolute;
+
+      left: 22px;
+      right: 22px;
+      bottom: 20px;
+
+      z-index: 2;
+
+      color: #ffffff;
     }
 
-    .stat{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:20px;
-      padding:16px;
-      min-height:108px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
+    .visual-copy strong {
+      display: block;
+
+      font-size: 22px;
+
+      margin-bottom: 4px;
     }
 
-    .stat b{
-      font-size:24px;
-      margin-bottom:3px;
+    .visual-copy span {
+      font-size: 14px;
+      opacity: 0.9;
     }
 
-    .stat span{
-      color:var(--muted);
-      font-size:14px;
+    /* STATS */
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 12px;
+
+      margin-top: 16px;
     }
 
-    .form-card{
-      background:rgba(255,255,255,.92);
-      border:1px solid var(--line);
-      border-radius:28px;
-      padding:26px;
-      box-shadow:0 18px 55px rgba(43,31,13,.07);
+    .stat {
+      background: var(--card);
+
+      border: 1px solid var(--line);
+      border-radius: 20px;
+
+      padding: 16px;
+
+      min-height: 108px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
-    .form-card h2{
-      margin:0 0 6px;
-      font-size:28px;
-      line-height:1.08;
-      letter-spacing:-.03em;
+    .stat b {
+      font-size: 24px;
+      margin-bottom: 3px;
     }
 
-    .form-card .hint{
-      margin:0 0 20px;
-      color:var(--muted);
-      font-size:14px;
+    .stat span {
+      color: var(--muted);
+      font-size: 14px;
     }
 
-    label{
-      display:block;
-      font-size:13px;
-      font-weight:800;
-      margin:14px 0 7px;
+    /* FORM */
+
+    .form-card {
+      background:
+        rgba(255, 255, 255, 0.94);
+
+      border: 1px solid var(--line);
+      border-radius: 28px;
+
+      padding: 26px;
+
+      box-shadow:
+        0 18px 55px rgba(43, 31, 13, 0.07);
     }
 
-    input{
-      width:100%;
-      height:54px;
-      border:1px solid #d8dce3;
-      border-radius:15px;
-      background:#fff;
-      padding:0 15px;
-      font-size:16px;
-      outline:none;
+    .form-card h2 {
+      margin: 0 0 6px;
+
+      font-size: 28px;
+      line-height: 1.08;
+
+      letter-spacing: -0.03em;
     }
 
-    input:focus{
-      border-color:var(--gold);
-      box-shadow:0 0 0 3px rgba(201,144,63,.12);
+    .form-card .hint {
+      margin: 0 0 20px;
+
+      color: var(--muted);
+      font-size: 14px;
     }
 
-    .rooms{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:8px;
-      margin-top:8px;
+    label {
+      display: block;
+
+      font-size: 13px;
+      font-weight: 800;
+
+      margin: 14px 0 7px;
     }
 
-    .room{
-      border:1px solid #e6e1d8;
-      background:#f7f4ef;
-      border-radius:999px;
-      padding:12px 6px;
-      font-weight:800;
-      color:#303846;
-      cursor:pointer;
+    input {
+      width: 100%;
+      height: 54px;
+
+      border: 1px solid #d8dce3;
+      border-radius: 15px;
+
+      background: #ffffff;
+
+      padding: 0 15px;
+
+      font-size: 16px;
+
+      outline: none;
     }
 
-    .room.active{
-      background:linear-gradient(135deg, var(--gold2), var(--gold));
-      border-color:transparent;
-      color:white;
+    input:focus {
+      border-color: var(--gold);
+
+      box-shadow:
+        0 0 0 3px rgba(201, 144, 63, 0.12);
     }
 
-    .cta{
-      width:100%;
-      border:0;
-      border-radius:16px;
-      min-height:58px;
-      padding:14px 18px;
-      margin-top:18px;
-      background:linear-gradient(135deg, var(--gold2), var(--gold));
-      color:#fff;
-      font-size:16px;
-      font-weight:900;
-      cursor:pointer;
+    /* ROOM BUTTONS */
+
+    .rooms {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 8px;
+
+      margin-top: 8px;
     }
 
-    .trust{
-      margin:11px 0 0;
-      font-size:12px;
-      line-height:1.4;
-      color:var(--muted);
-      text-align:center;
+    .room {
+      border: 1px solid #e6e1d8;
+
+      background: #f7f4ef;
+
+      border-radius: 999px;
+
+      padding: 12px 6px;
+
+      font-weight: 800;
+      color: #303846;
+
+      cursor: pointer;
     }
 
-    .success{
-      display:none;
-      margin-top:12px;
-      padding:12px 14px;
-      border-radius:14px;
-      background:#f3f8f1;
-      color:#315b2a;
-      font-size:13px;
-      font-weight:700;
+    .room.active {
+      background:
+        linear-gradient(
+          135deg,
+          var(--gold2),
+          var(--gold)
+        );
+
+      border-color: transparent;
+
+      color: #ffffff;
     }
 
-    @media (max-width: 860px){
-      .wrap{
-        width:min(100% - 24px, 680px);
+    /* CTA */
+
+    .cta {
+      width: 100%;
+
+      border: none;
+      border-radius: 16px;
+
+      min-height: 58px;
+
+      padding: 14px 18px;
+
+      margin-top: 18px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--gold2),
+          var(--gold)
+        );
+
+      color: #ffffff;
+
+      font-size: 16px;
+      font-weight: 900;
+
+      cursor: pointer;
+
+      transition: 0.2s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-1px);
+    }
+
+    .cta:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* SUCCESS */
+
+    .message {
+      display: none;
+
+      margin-top: 14px;
+
+      padding: 13px 14px;
+
+      border-radius: 14px;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      line-height: 1.4;
+    }
+
+    .message.success {
+      display: block;
+
+      background: #f1f8ef;
+      color: #315b2a;
+
+      border: 1px solid #d6ead0;
+    }
+
+    .message.error {
+      display: block;
+
+      background: #fff1f1;
+      color: #9f3333;
+
+      border: 1px solid #f0cccc;
+    }
+
+    .trust {
+      margin: 11px 0 0;
+
+      font-size: 12px;
+      line-height: 1.4;
+
+      color: var(--muted);
+
+      text-align: center;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 860px) {
+
+      .wrap {
+        width: min(100% - 24px, 680px);
       }
 
-      header{
-        height:64px;
+      header {
+        height: 64px;
       }
 
-      .brand{
-        font-size:26px;
+      .brand {
+        font-size: 26px;
       }
 
-      main{
-        padding-top:6px;
+      main {
+        padding-top: 6px;
       }
 
-      .hero-grid{
-        grid-template-columns:1fr;
-        gap:16px;
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
       }
 
-      .offer-badge{
-        margin-bottom:14px;
-        font-size:14px;
+      .offer-badge {
+        margin-bottom: 14px;
+        font-size: 14px;
       }
 
-      h1{
-        font-size:clamp(44px, 12vw, 68px);
+      h1 {
+        font-size:
+          clamp(44px, 12vw, 68px);
       }
 
-      .sub{
-        font-size:20px;
-        margin-top:18px;
+      .sub {
+        font-size: 20px;
+        margin-top: 18px;
       }
 
-      .micro{
-        font-size:14px;
-        margin-bottom:16px;
+      .micro {
+        font-size: 14px;
+        margin-bottom: 16px;
       }
 
-      .visual{
-        min-height:330px;
-        border-radius:24px;
+      .visual {
+        min-height: 330px;
+        border-radius: 24px;
       }
 
-      .visual img{
-        min-height:330px;
+      .visual img {
+        min-height: 330px;
       }
 
-      .stats{
-        gap:8px;
+      .stats {
+        gap: 8px;
       }
 
-      .stat{
-        padding:13px;
-        min-height:92px;
-        border-radius:16px;
+      .stat {
+        padding: 13px;
+
+        min-height: 92px;
+
+        border-radius: 16px;
       }
 
-      .stat b{
-        font-size:20px;
+      .stat b {
+        font-size: 20px;
       }
 
-      .stat span{
-        font-size:12px;
+      .stat span {
+        font-size: 12px;
       }
 
-      .form-card{
-        padding:20px;
-        border-radius:24px;
+      .form-card {
+        padding: 20px;
+        border-radius: 24px;
       }
 
-      .form-card h2{
-        font-size:24px;
+      .form-card h2 {
+        font-size: 24px;
       }
     }
 
-    @media (max-width: 460px){
-      .wrap{
-        width:calc(100% - 20px);
+    /* MOBILE */
+
+    @media (max-width: 460px) {
+
+      .wrap {
+        width:
+          calc(100% - 20px);
       }
 
-      header{
-        height:58px;
+      header {
+        height: 58px;
       }
 
-      .brand{
-        font-size:24px;
+      .brand {
+        font-size: 24px;
       }
 
-      .lang{
-        font-size:12px;
+      .lang {
+        font-size: 12px;
       }
 
-      h1{
-        font-size:44px;
+      h1 {
+        font-size: 44px;
       }
 
-      .sub{
-        font-size:18px;
+      .sub {
+        font-size: 18px;
       }
 
-      .visual{
-        min-height:285px;
+      .visual {
+        min-height: 285px;
       }
 
-      .visual img{
-        min-height:285px;
+      .visual img {
+        min-height: 285px;
       }
 
-      .visual-copy strong{
-        font-size:18px;
+      .visual-copy strong {
+        font-size: 18px;
       }
 
-      .stats{
-        grid-template-columns:repeat(3,1fr);
+      .stats {
+        grid-template-columns:
+          repeat(3, 1fr);
       }
 
-      .stat{
-        padding:10px 8px;
-        min-height:82px;
+      .stat {
+        padding: 10px 8px;
+
+        min-height: 82px;
       }
 
-      .stat b{
-        font-size:17px;
+      .stat b {
+        font-size: 17px;
       }
 
-      .stat span{
-        font-size:11px;
+      .stat span {
+        font-size: 11px;
       }
 
-      .rooms{
-        grid-template-columns:repeat(2,1fr);
+      .rooms {
+        grid-template-columns:
+          repeat(2, 1fr);
       }
     }
   </style>
@@ -433,16 +609,33 @@
 
 <body>
 
+  <!-- HEADER -->
+
   <header class="wrap">
+
     <div class="nav">
-      <div class="brand">Golden <span>Lake</span></div>
-      <div class="lang"><b>UZ</b> &nbsp;|&nbsp; RU</div>
+
+      <div class="brand">
+        Golden <span>Lake</span>
+      </div>
+
+      <div class="lang">
+        <b>UZ</b> &nbsp;|&nbsp; RU
+      </div>
+
     </div>
+
   </header>
+
+
+  <!-- MAIN -->
 
   <main class="wrap">
 
     <div class="hero-grid">
+
+
+      <!-- LEFT SIDE -->
 
       <section>
 
@@ -450,19 +643,31 @@
           30% chegirma
         </div>
 
+
         <h1>
+
           Mirobod tumanida
-          <span class="accent">Comfort Plus</span>
+
+          <span class="accent">
+            Comfort Plus
+          </span>
+
           xonadonlar
+
         </h1>
+
 
         <p class="sub">
           Barcha xonadonlar uchun 30% chegirma
         </p>
 
+
         <p class="micro">
           4.4 GA maydon, 72% infratuzilma va yer osti parkovka
         </p>
+
+
+        <!-- IMAGE -->
 
         <div class="visual">
 
@@ -471,7 +676,9 @@
             alt="Golden Lake turarjoy majmuasi"
           />
 
+
           <div class="visual-copy">
+
             <strong>
               Miroboddagi zamonaviy yashash muhiti
             </strong>
@@ -479,71 +686,120 @@
             <span>
               Golden Lake · Toshkent
             </span>
+
           </div>
 
         </div>
 
+
+        <!-- STATS -->
+
         <div class="stats">
 
           <div class="stat">
-            <b>4.4 GA</b>
-            <span>maydon</span>
+
+            <b>
+              4.4 GA
+            </b>
+
+            <span>
+              maydon
+            </span>
+
           </div>
 
-          <div class="stat">
-            <b>72%</b>
-            <span>infratuzilma</span>
-          </div>
 
           <div class="stat">
-            <b>Parking</b>
-            <span>yer ostida</span>
+
+            <b>
+              72%
+            </b>
+
+            <span>
+              infratuzilma
+            </span>
+
+          </div>
+
+
+          <div class="stat">
+
+            <b>
+              Parking
+            </b>
+
+            <span>
+              yer ostida
+            </span>
+
           </div>
 
         </div>
 
       </section>
 
-      <aside class="form-card" id="lead">
+
+      <!-- FORM -->
+
+      <aside
+        class="form-card"
+        id="lead"
+      >
 
         <h2>
           Xonadon narxlari bilan tanishing
         </h2>
 
+
         <p class="hint">
           Ma’lumot olish uchun qisqa formani to‘ldiring.
         </p>
 
+
         <form id="leadForm">
+
+
+          <!-- NAME -->
 
           <label for="name">
             Ismingiz
           </label>
+
 
           <input
             id="name"
             name="name"
             type="text"
             placeholder="Ismingiz"
+            autocomplete="name"
             required
           />
+
+
+          <!-- PHONE -->
 
           <label for="phone">
             Telefon raqamingiz
           </label>
+
 
           <input
             id="phone"
             name="phone"
             type="tel"
             inputmode="tel"
-            placeholder="+998 __ ___ __ __"
+            autocomplete="tel"
+            placeholder="+998 90 123 45 67"
             required
           />
+
+
+          <!-- ROOM -->
 
           <label>
             Necha xonali xonadon haqida ma’lumot olmoqchisiz?
           </label>
+
 
           <div class="rooms">
 
@@ -555,6 +811,7 @@
               1 xonali
             </button>
 
+
             <button
               type="button"
               class="room"
@@ -563,6 +820,7 @@
               2 xonali
             </button>
 
+
             <button
               type="button"
               class="room"
@@ -570,6 +828,7 @@
             >
               3 xonali
             </button>
+
 
             <button
               type="button"
@@ -581,30 +840,38 @@
 
           </div>
 
+
           <input
             type="hidden"
-            name="room"
             id="room"
+            name="room"
             value="1 xonali"
           />
 
+
+          <!-- CTA -->
+
           <button
             class="cta"
+            id="submitBtn"
             type="submit"
           >
             Xonadon narxlari bilan tanishish →
           </button>
 
+
+          <!-- MESSAGE -->
+
           <div
-            class="success"
-            id="success"
-          >
-            Arizangiz qabul qilindi. Menejerimiz tez orada siz bilan bog‘lanadi.
-          </div>
+            class="message"
+            id="message"
+          ></div>
+
 
           <p class="trust">
             Ma’lumotlaringiz faqat Golden Lake bo‘yicha bog‘lanish uchun ishlatiladi.
           </p>
+
 
         </form>
 
@@ -614,137 +881,194 @@
 
   </main>
 
+
+  <!-- JAVASCRIPT -->
+
   <script>
 
+    /* GOOGLE APPS SCRIPT URL */
+
     const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbwSBOCCXFArpgd0j4RD3DyCqXCCNY3DBKvwSDSt8N5GayPJAzMYS_PvWXl1kux6m78/exec";
+      "https://script.google.com/macros/s/AKfycbwSBOCCXFArpgd0j4RD3DyCqXCCNY3DBKvwSDSt8N5GayPJAzMYS_PvWXl1kux6m78/exec";
 
-    const rooms =
-      document.querySelectorAll(".room");
 
-    const roomInput =
-      document.getElementById("room");
+    /* ELEMENTS */
 
     const form =
       document.getElementById("leadForm");
 
-    const successBox =
-      document.getElementById("success");
+
+    const nameInput =
+      document.getElementById("name");
+
+
+    const phoneInput =
+      document.getElementById("phone");
+
+
+    const roomInput =
+      document.getElementById("room");
+
+
+    const roomButtons =
+      document.querySelectorAll(".room");
+
 
     const submitBtn =
-      form.querySelector(".cta");
+      document.getElementById("submitBtn");
 
 
-    rooms.forEach(btn => {
+    const message =
+      document.getElementById("message");
 
-      btn.addEventListener("click", () => {
 
-        rooms.forEach(x =>
-          x.classList.remove("active")
-        );
+    /* ROOM SELECTION */
 
-        btn.classList.add("active");
+    roomButtons.forEach(button => {
 
-        roomInput.value =
-          btn.dataset.room;
+      button.addEventListener(
+        "click",
+        function() {
 
-      });
+          roomButtons.forEach(btn => {
+            btn.classList.remove("active");
+          });
+
+
+          this.classList.add("active");
+
+
+          roomInput.value =
+            this.dataset.room;
+
+        }
+      );
 
     });
 
 
-    function getUTM(name){
+    /* GET UTM */
 
-      return new URLSearchParams(
-        window.location.search
-      ).get(name) || "";
+    function getUTM(parameter) {
+
+      const params =
+        new URLSearchParams(
+          window.location.search
+        );
+
+
+      return params.get(parameter) || "";
 
     }
 
 
+    /* SHOW MESSAGE */
+
+    function showMessage(
+      text,
+      type
+    ) {
+
+      message.className =
+        "message " + type;
+
+
+      message.textContent =
+        text;
+
+    }
+
+
+    /* SUBMIT FORM */
+
     form.addEventListener(
       "submit",
-      async function(e){
+      async function(event) {
 
-        e.preventDefault();
+        event.preventDefault();
 
 
         const name =
-          document
-          .getElementById("name")
-          .value
-          .trim();
+          nameInput.value.trim();
 
 
         const phone =
-          document
-          .getElementById("phone")
-          .value
-          .trim();
+          phoneInput.value.trim();
 
 
         const room =
           roomInput.value;
 
 
-        if(!name || !phone){
+        /* VALIDATION */
 
-          successBox.style.display =
-            "block";
+        if (!name) {
 
-          successBox.style.background =
-            "#fff1f1";
-
-          successBox.style.color =
-            "#a33";
-
-          successBox.textContent =
-            "Iltimos, ism va telefon raqamingizni kiriting.";
+          showMessage(
+            "Iltimos, ismingizni kiriting.",
+            "error"
+          );
 
           return;
 
         }
 
 
-        const payload =
+        if (!phone) {
+
+          showMessage(
+            "Iltimos, telefon raqamingizni kiriting.",
+            "error"
+          );
+
+          return;
+
+        }
+
+
+        /* DATA */
+
+        const data =
           new URLSearchParams();
 
 
-        payload.append(
+        data.append(
           "name",
           name
         );
 
 
-        payload.append(
+        data.append(
           "phone",
           phone
         );
 
 
-        payload.append(
+        data.append(
           "room",
           room
         );
 
 
-        payload.append(
+        data.append(
           "source",
-          getUTM("utm_source")
+          getUTM("utm_source") || "website"
         );
 
 
-        payload.append(
+        data.append(
           "campaign",
           getUTM("utm_campaign")
         );
 
 
-        payload.append(
+        data.append(
           "content",
           getUTM("utm_content")
         );
 
+
+        /* LOADING */
 
         submitBtn.disabled =
           true;
@@ -754,52 +1078,52 @@
           "Yuborilmoqda...";
 
 
-        try{
+        message.className =
+          "message";
+
+
+        message.textContent =
+          "";
+
+
+        try {
+
+          /* SEND TO GOOGLE SHEETS */
 
           await fetch(
             SCRIPT_URL,
             {
-              method:"POST",
 
-              mode:"no-cors",
+              method: "POST",
 
-              headers:{
-                "Content-Type":
-                "application/x-www-form-urlencoded"
-              },
+              mode: "no-cors",
 
-              body:
-                payload.toString()
+              body: data
+
             }
           );
 
 
-          successBox.style.display =
-            "block";
+          /* SUCCESS */
+
+          showMessage(
+            "Arizangiz qabul qilindi. Menejerimiz tez orada siz bilan bog‘lanadi.",
+            "success"
+          );
 
 
-          successBox.style.background =
-            "#f3f8f1";
-
-
-          successBox.style.color =
-            "#315b2a";
-
-
-          successBox.textContent =
-            "Arizangiz qabul qilindi. Menejerimiz tez orada siz bilan bog‘lanadi.";
-
+          /* RESET */
 
           form.reset();
 
 
-          rooms.forEach(
-            x =>
-            x.classList.remove("active")
+          roomButtons.forEach(
+            btn =>
+              btn.classList.remove("active")
           );
 
 
-          rooms[0]
+          roomButtons[0]
             .classList
             .add("active");
 
@@ -808,28 +1132,32 @@
             "1 xonali";
 
 
-        }
+          /* SCROLL MESSAGE */
 
-        catch(err){
+          message.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+          });
 
-          successBox.style.display =
-            "block";
-
-
-          successBox.style.background =
-            "#fff1f1";
-
-
-          successBox.style.color =
-            "#a33";
-
-
-          successBox.textContent =
-            "Arizani yuborishda xatolik yuz berdi. Qayta urinib ko‘ring.";
 
         }
 
-        finally{
+        catch (error) {
+
+          console.error(
+            "Lead yuborishda xatolik:",
+            error
+          );
+
+
+          showMessage(
+            "Arizani yuborishda xatolik yuz berdi. Iltimos, qayta urinib ko‘ring.",
+            "error"
+          );
+
+        }
+
+        finally {
 
           submitBtn.disabled =
             false;
