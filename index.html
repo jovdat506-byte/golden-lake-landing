@@ -3,235 +3,847 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#ffffff" />
+  <title>Golden Lake — Mirobod tumanida Comfort Plus xonadonlar</title>
   <meta name="description" content="Golden Lake — Mirobod tumanida Comfort Plus xonadonlar. Barcha xonadonlar uchun 30% chegirma." />
-  <title>Golden Lake — Comfort Plus xonadonlar</title>
-  <link rel="preload" href="/assets/golden-lake-hero.webp" as="image" type="image/webp" fetchpriority="high" />
+
   <style>
     :root{
       --bg:#fbfaf7;
-      --surface:#ffffff;
-      --ink:#111827;
-      --muted:#717784;
-      --gold:#c9954f;
-      --gold2:#e3b66f;
-      --line:#eadac4;
-      --chip:#f6f1e9;
-      --shadow:0 14px 35px rgba(56,39,17,.08);
-      --radius:22px;
+      --text:#121827;
+      --muted:#6f7682;
+      --gold:#c9903f;
+      --gold2:#e6bd77;
+      --line:#eadbc4;
+      --card:#ffffff;
     }
+
     *{box-sizing:border-box}
+
     html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
-    button,input{font:inherit}
-    .page{min-height:100svh;overflow:hidden;position:relative}
-    .page:before,.page:after{content:"";position:absolute;border:1px solid rgba(201,149,79,.18);border-radius:999px;pointer-events:none;z-index:0}
-    .page:before{width:430px;height:430px;right:-305px;top:-120px}
-    .page:after{width:330px;height:330px;left:-260px;bottom:-130px}
-    .wrap{position:relative;z-index:1;width:min(100%,520px);margin:0 auto;padding:18px 18px 28px}
-    header{display:flex;align-items:center;justify-content:space-between;margin:0 0 18px}
-    .brand{font-weight:800;letter-spacing:-.04em;font-size:29px;line-height:1;color:var(--ink)}
-    .brand span{color:var(--gold)}
-    .langs{display:flex;gap:10px;align-items:center;font-size:14px;font-weight:700}
-    .langs a{color:#8b8f98;text-decoration:none}
-    .langs a.active{color:var(--gold)}
-    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(201,149,79,.55);background:#fffaf2;color:#9b6728;padding:9px 13px;border-radius:999px;font-size:14px;font-weight:800;margin-bottom:14px}
-    .badge svg{width:17px;height:17px}
-    h1{margin:0;font-size:clamp(35px,9.1vw,53px);line-height:.98;letter-spacing:-.055em;max-width:480px}
-    h1 .gold{color:var(--gold)}
-    .offer{font-size:21px;line-height:1.25;font-weight:700;margin:17px 0 7px}
-    .support{font-size:15px;line-height:1.45;color:var(--muted);margin:0 0 18px}
-    .hero{position:relative;border-radius:26px;overflow:hidden;background:#d9e3ea;box-shadow:var(--shadow);aspect-ratio:1.45/1;margin-bottom:14px}
-    .hero img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 58%}
-    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,16,31,.1) 25%,rgba(5,16,31,.68) 100%)}
-    .hero-label{position:absolute;left:16px;top:16px;z-index:2;color:white;font-weight:750;font-size:16px;line-height:1.25;text-shadow:0 2px 14px rgba(0,0,0,.2)}
-    .hero-bottom{position:absolute;left:14px;right:14px;bottom:14px;z-index:2;display:flex;justify-content:space-between;gap:10px;align-items:center}
-    .location,.mini-cta{display:flex;align-items:center;gap:9px;background:rgba(24,25,24,.62);color:#fff;border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(10px);padding:10px 12px;border-radius:999px;font-size:12px;font-weight:700}
-    .mini-cta{white-space:nowrap;background:rgba(24,25,24,.72)}
-    .hero-bottom svg{width:17px;height:17px;flex:0 0 auto}
-    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:0 0 16px}
-    .stat{background:rgba(255,255,255,.8);border:1px solid #eee4d7;border-radius:18px;padding:13px 10px 12px;min-height:100px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
-    .icon{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#f5e8d4;color:#a87331;margin-bottom:8px}
-    .icon svg{width:18px;height:18px}
-    .stat strong{font-size:17px;letter-spacing:-.02em}
-    .stat span{font-size:12.5px;line-height:1.2;color:var(--muted);margin-top:2px}
-    .form-card{background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:24px;box-shadow:0 12px 30px rgba(96,69,34,.06);padding:18px}
-    .form-card h2{font-size:23px;line-height:1.1;letter-spacing:-.035em;margin:0 0 14px}
-    .field{height:58px;border:1px solid #dcdfe4;border-radius:15px;background:#fff;display:flex;align-items:center;padding:0 15px;gap:11px;margin-bottom:10px}
-    .field:focus-within{border-color:#cba05e;box-shadow:0 0 0 3px rgba(203,160,94,.12)}
-    .field svg{width:20px;height:20px;color:#747b86;flex:0 0 auto}
-    .field input{border:0;outline:0;width:100%;font-size:17px;background:transparent;color:var(--ink)}
-    .field input::placeholder{color:#999ea7}
-    .rooms-label{font-size:14px;font-weight:700;margin:14px 0 10px}
-    .rooms{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:13px}
-    .room{border:1px solid transparent;background:var(--chip);color:#2f3847;border-radius:999px;padding:11px 6px;font-size:13px;font-weight:700;cursor:pointer;transition:.2s}
-    .room.active{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#fff;box-shadow:0 7px 16px rgba(201,149,79,.22)}
-    .submit{width:100%;border:0;border-radius:15px;background:linear-gradient(135deg,#daa95f,#b77d34);color:#fff;padding:17px 16px;font-weight:800;font-size:16px;display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;box-shadow:0 10px 22px rgba(183,125,52,.22)}
-    .submit:disabled{opacity:.65;cursor:not-allowed}
-    .trust{display:flex;gap:8px;align-items:flex-start;color:#7a808b;font-size:11.5px;line-height:1.35;margin:11px 3px 0}
-    .trust svg{width:17px;height:17px;color:var(--gold);flex:0 0 auto;margin-top:1px}
-    .status{display:none;margin-top:10px;padding:10px 12px;border-radius:12px;font-size:13px;font-weight:700}
-    .status.ok{display:block;background:#ecf8f0;color:#227248}
-    .status.err{display:block;background:#fff0f0;color:#a63d3d}
-    .micro{font-size:10.5px;color:#a0a3aa;text-align:center;margin:14px 0 0}
-    @media (min-width:760px){
-      .wrap{width:min(1180px,calc(100% - 48px));padding:26px 0 40px}
-      header{margin-bottom:28px}.brand{font-size:34px}
-      .desktop-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:34px;align-items:start}
-      .left{position:sticky;top:24px}
-      .hero{aspect-ratio:1.45/1;margin-top:24px}
-      h1{font-size:64px}.offer{font-size:25px}.support{font-size:17px}
-      .right{padding-top:42px}.form-card{padding:24px}
-      .stats{margin-bottom:18px}.stat{min-height:110px}
-      .form-card h2{font-size:28px}.submit{font-size:17px}
+
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    .wrap{
+      width:min(1180px, calc(100% - 32px));
+      margin:0 auto;
+    }
+
+    header{
+      height:76px;
+      display:flex;
+      align-items:center;
+    }
+
+    .nav{
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+
+    .brand{
+      font-size:30px;
+      line-height:1;
+      font-weight:800;
+      letter-spacing:-0.04em;
+    }
+
+    .brand span{
+      color:var(--gold);
+    }
+
+    .lang{
+      font-size:14px;
+      font-weight:700;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    .lang b{
+      color:var(--gold);
+    }
+
+    main{
+      padding:14px 0 44px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:34px;
+      align-items:start;
+    }
+
+    .offer-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:9px 14px;
+      border:1px solid var(--gold2);
+      border-radius:999px;
+      font-weight:800;
+      color:#94611d;
+      background:#fffaf1;
+      margin-bottom:18px;
+    }
+
+    h1{
+      margin:0;
+      font-size:clamp(48px, 5.3vw, 78px);
+      line-height:.95;
+      letter-spacing:-.055em;
+      max-width:720px;
+    }
+
+    h1 .accent{
+      color:var(--gold);
+    }
+
+    .sub{
+      margin:22px 0 8px;
+      font-size:24px;
+      line-height:1.2;
+      font-weight:800;
+    }
+
+    .micro{
+      margin:0 0 22px;
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    .visual{
+      position:relative;
+      overflow:hidden;
+      border-radius:28px;
+      min-height:420px;
+      background:#d7dce2;
+      box-shadow:0 18px 50px rgba(33,26,16,.10);
+    }
+
+    .visual img{
+      width:100%;
+      height:100%;
+      min-height:420px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .visual:after{
+      content:"";
+      position:absolute;
+      inset:auto 0 0 0;
+      height:46%;
+      background:linear-gradient(transparent, rgba(0,0,0,.54));
+      pointer-events:none;
+    }
+
+    .visual-copy{
+      position:absolute;
+      left:22px;
+      right:22px;
+      bottom:20px;
+      z-index:2;
+      color:#fff;
+    }
+
+    .visual-copy strong{
+      display:block;
+      font-size:22px;
+      margin-bottom:4px;
+    }
+
+    .visual-copy span{
+      font-size:14px;
+      opacity:.9;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:12px;
+      margin:16px 0 0;
+    }
+
+    .stat{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:16px;
+      min-height:108px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .stat b{
+      font-size:24px;
+      margin-bottom:3px;
+    }
+
+    .stat span{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .form-card{
+      background:rgba(255,255,255,.92);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:26px;
+      box-shadow:0 18px 55px rgba(43,31,13,.07);
+    }
+
+    .form-card h2{
+      margin:0 0 6px;
+      font-size:28px;
+      line-height:1.08;
+      letter-spacing:-.03em;
+    }
+
+    .form-card .hint{
+      margin:0 0 20px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    label{
+      display:block;
+      font-size:13px;
+      font-weight:800;
+      margin:14px 0 7px;
+    }
+
+    input{
+      width:100%;
+      height:54px;
+      border:1px solid #d8dce3;
+      border-radius:15px;
+      background:#fff;
+      padding:0 15px;
+      font-size:16px;
+      outline:none;
+    }
+
+    input:focus{
+      border-color:var(--gold);
+      box-shadow:0 0 0 3px rgba(201,144,63,.12);
+    }
+
+    .rooms{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:8px;
+      margin-top:8px;
+    }
+
+    .room{
+      border:1px solid #e6e1d8;
+      background:#f7f4ef;
+      border-radius:999px;
+      padding:12px 6px;
+      font-weight:800;
+      color:#303846;
+      cursor:pointer;
+    }
+
+    .room.active{
+      background:linear-gradient(135deg, var(--gold2), var(--gold));
+      border-color:transparent;
+      color:white;
+    }
+
+    .cta{
+      width:100%;
+      border:0;
+      border-radius:16px;
+      min-height:58px;
+      padding:14px 18px;
+      margin-top:18px;
+      background:linear-gradient(135deg, var(--gold2), var(--gold));
+      color:#fff;
+      font-size:16px;
+      font-weight:900;
+      cursor:pointer;
+    }
+
+    .trust{
+      margin:11px 0 0;
+      font-size:12px;
+      line-height:1.4;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    .success{
+      display:none;
+      margin-top:12px;
+      padding:12px 14px;
+      border-radius:14px;
+      background:#f3f8f1;
+      color:#315b2a;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    @media (max-width: 860px){
+      .wrap{
+        width:min(100% - 24px, 680px);
+      }
+
+      header{
+        height:64px;
+      }
+
+      .brand{
+        font-size:26px;
+      }
+
+      main{
+        padding-top:6px;
+      }
+
+      .hero-grid{
+        grid-template-columns:1fr;
+        gap:16px;
+      }
+
+      .offer-badge{
+        margin-bottom:14px;
+        font-size:14px;
+      }
+
+      h1{
+        font-size:clamp(44px, 12vw, 68px);
+      }
+
+      .sub{
+        font-size:20px;
+        margin-top:18px;
+      }
+
+      .micro{
+        font-size:14px;
+        margin-bottom:16px;
+      }
+
+      .visual{
+        min-height:330px;
+        border-radius:24px;
+      }
+
+      .visual img{
+        min-height:330px;
+      }
+
+      .stats{
+        gap:8px;
+      }
+
+      .stat{
+        padding:13px;
+        min-height:92px;
+        border-radius:16px;
+      }
+
+      .stat b{
+        font-size:20px;
+      }
+
+      .stat span{
+        font-size:12px;
+      }
+
+      .form-card{
+        padding:20px;
+        border-radius:24px;
+      }
+
+      .form-card h2{
+        font-size:24px;
+      }
+    }
+
+    @media (max-width: 460px){
+      .wrap{
+        width:calc(100% - 20px);
+      }
+
+      header{
+        height:58px;
+      }
+
+      .brand{
+        font-size:24px;
+      }
+
+      .lang{
+        font-size:12px;
+      }
+
+      h1{
+        font-size:44px;
+      }
+
+      .sub{
+        font-size:18px;
+      }
+
+      .visual{
+        min-height:285px;
+      }
+
+      .visual img{
+        min-height:285px;
+      }
+
+      .visual-copy strong{
+        font-size:18px;
+      }
+
+      .stats{
+        grid-template-columns:repeat(3,1fr);
+      }
+
+      .stat{
+        padding:10px 8px;
+        min-height:82px;
+      }
+
+      .stat b{
+        font-size:17px;
+      }
+
+      .stat span{
+        font-size:11px;
+      }
+
+      .rooms{
+        grid-template-columns:repeat(2,1fr);
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="page">
-    <main class="wrap">
-      <header>
-        <div class="brand">Golden <span>Lake</span></div>
-        <nav class="langs" aria-label="Til">
-          <a class="active" href="#" aria-current="page">UZ</a><span>|</span><a href="#" onclick="return false">RU</a>
-        </nav>
-      </header>
 
-      <div class="desktop-grid">
-        <section class="left">
-          <div class="badge" aria-label="30% chegirma">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12v10H4V12"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5A2.5 2.5 0 1 1 10 4.5C10 7 12 7 12 7Z"/><path d="M12 7h4.5A2.5 2.5 0 1 0 14 4.5C14 7 12 7 12 7Z"/></svg>
-            30% chegirma
+  <header class="wrap">
+    <div class="nav">
+      <div class="brand">Golden <span>Lake</span></div>
+      <div class="lang"><b>UZ</b> &nbsp;|&nbsp; RU</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <div class="hero-grid">
+
+      <section>
+
+        <div class="offer-badge">
+          30% chegirma
+        </div>
+
+        <h1>
+          Mirobod tumanida
+          <span class="accent">Comfort Plus</span>
+          xonadonlar
+        </h1>
+
+        <p class="sub">
+          Barcha xonadonlar uchun 30% chegirma
+        </p>
+
+        <p class="micro">
+          4.4 GA maydon, 72% infratuzilma va yer osti parkovka
+        </p>
+
+        <div class="visual">
+
+          <img
+            src="assets/hero.webp"
+            alt="Golden Lake turarjoy majmuasi"
+          />
+
+          <div class="visual-copy">
+            <strong>
+              Miroboddagi zamonaviy yashash muhiti
+            </strong>
+
+            <span>
+              Golden Lake · Toshkent
+            </span>
           </div>
-          <h1>Mirobod tumanida <span class="gold">Comfort Plus</span> xonadonlar</h1>
-          <p class="offer">Barcha xonadonlar uchun 30% chegirma</p>
-          <p class="support">4.4 GA maydon, 72% infratuzilma va yer osti parkovka</p>
 
-          <div class="hero">
-            <img src="/assets/golden-lake-hero.webp" alt="Golden Lake turarjoy majmuasi" width="1280" height="909" decoding="async" fetchpriority="high" />
-            <div class="hero-label">Miroboddagi<br>zamonaviy yashash muhiti</div>
-            <div class="hero-bottom">
-              <div class="location">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-                Mirobod tumani
-              </div>
-              <a class="mini-cta" href="#lead-form" style="text-decoration:none">Narxlarni olish ↓</a>
-            </div>
-          </div>
-        </section>
+        </div>
 
-        <section class="right">
-          <div class="stats" aria-label="Loyiha haqida">
-            <div class="stat">
-              <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 9h6M9 13h6M9 17h6"/></svg></div>
-              <strong>4.4 GA</strong><span>maydon</span>
-            </div>
-            <div class="stat">
-              <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22V10"/><path d="M9 18h6"/><path d="M6 10a6 6 0 1 1 12 0c0 2.5-1.5 4-3 5H9c-1.5-1-3-2.5-3-5Z"/></svg></div>
-              <strong>72%</strong><span>infratuzilma</span>
-            </div>
-            <div class="stat">
-              <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 16V9l2-4h14l2 4v7"/><path d="M5 16v3M19 16v3"/><path d="M3 13h18"/><circle cx="7" cy="14" r="1"/><circle cx="17" cy="14" r="1"/></svg></div>
-              <strong>Yer osti</strong><span>parkovka</span>
-            </div>
+        <div class="stats">
+
+          <div class="stat">
+            <b>4.4 GA</b>
+            <span>maydon</span>
           </div>
 
-          <form class="form-card" id="lead-form" novalidate>
-            <h2>Ma’lumot olish uchun formani to‘ldiring</h2>
+          <div class="stat">
+            <b>72%</b>
+            <span>infratuzilma</span>
+          </div>
 
-            <label class="field">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
-              <input id="name" name="name" autocomplete="name" placeholder="Ismingiz" required />
-            </label>
+          <div class="stat">
+            <b>Parking</b>
+            <span>yer ostida</span>
+          </div>
 
-            <label class="field">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"/></svg>
-              <input id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="+998 __ ___ __ __" required />
-            </label>
+        </div>
 
-            <div class="rooms-label">Necha xonali xonadon haqida ma’lumot olmoqchisiz?</div>
-            <div class="rooms" role="radiogroup" aria-label="Xonalar soni">
-              <button class="room active" type="button" data-room="1 xonali">1 xonali</button>
-              <button class="room" type="button" data-room="2 xonali">2 xonali</button>
-              <button class="room" type="button" data-room="3 xonali">3 xonali</button>
-              <button class="room" type="button" data-room="4+ xonali">+4 xonali</button>
-            </div>
+      </section>
 
-            <button class="submit" type="submit">
-              <span>Xonadon narxlari bilan tanishish</span><span aria-hidden="true">→</span>
+      <aside class="form-card" id="lead">
+
+        <h2>
+          Xonadon narxlari bilan tanishing
+        </h2>
+
+        <p class="hint">
+          Ma’lumot olish uchun qisqa formani to‘ldiring.
+        </p>
+
+        <form id="leadForm">
+
+          <label for="name">
+            Ismingiz
+          </label>
+
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Ismingiz"
+            required
+          />
+
+          <label for="phone">
+            Telefon raqamingiz
+          </label>
+
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            inputmode="tel"
+            placeholder="+998 __ ___ __ __"
+            required
+          />
+
+          <label>
+            Necha xonali xonadon haqida ma’lumot olmoqchisiz?
+          </label>
+
+          <div class="rooms">
+
+            <button
+              type="button"
+              class="room active"
+              data-room="1 xonali"
+            >
+              1 xonali
             </button>
 
-            <div class="trust">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
-              <span>Arizangiz qabul qilinadi va menejerimiz tez orada siz bilan bog‘lanadi.</span>
-            </div>
-            <div id="status" class="status" role="status" aria-live="polite"></div>
-          </form>
-          <p class="micro">Golden Lake · Mirobod tumani · Toshkent</p>
-        </section>
-      </div>
-    </main>
-  </div>
+            <button
+              type="button"
+              class="room"
+              data-room="2 xonali"
+            >
+              2 xonali
+            </button>
+
+            <button
+              type="button"
+              class="room"
+              data-room="3 xonali"
+            >
+              3 xonali
+            </button>
+
+            <button
+              type="button"
+              class="room"
+              data-room="+4 xonali"
+            >
+              +4 xonali
+            </button>
+
+          </div>
+
+          <input
+            type="hidden"
+            name="room"
+            id="room"
+            value="1 xonali"
+          />
+
+          <button
+            class="cta"
+            type="submit"
+          >
+            Xonadon narxlari bilan tanishish →
+          </button>
+
+          <div
+            class="success"
+            id="success"
+          >
+            Arizangiz qabul qilindi. Menejerimiz tez orada siz bilan bog‘lanadi.
+          </div>
+
+          <p class="trust">
+            Ma’lumotlaringiz faqat Golden Lake bo‘yicha bog‘lanish uchun ishlatiladi.
+          </p>
+
+        </form>
+
+      </aside>
+
+    </div>
+
+  </main>
 
   <script>
-    const rooms = document.querySelectorAll('.room');
-    let selectedRoom = '1 xonali';
-    rooms.forEach(btn => btn.addEventListener('click', () => {
-      rooms.forEach(x => x.classList.remove('active'));
-      btn.classList.add('active');
-      selectedRoom = btn.dataset.room;
-    }));
 
-    const phone = document.getElementById('phone');
-    phone.addEventListener('focus', () => { if (!phone.value) phone.value = '+998 '; });
-    phone.addEventListener('input', e => {
-      let digits = e.target.value.replace(/\D/g,'');
-      if (digits.startsWith('998')) digits = digits.slice(3);
-      digits = digits.slice(0,9);
-      let out = '+998 ';
-      if (digits.length) out += digits.slice(0,2);
-      if (digits.length > 2) out += ' ' + digits.slice(2,5);
-      if (digits.length > 5) out += ' ' + digits.slice(5,7);
-      if (digits.length > 7) out += ' ' + digits.slice(7,9);
-      e.target.value = out;
+    const SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbwSBOCCXFArpgd0j4RD3DyCqXCCNY3DBKvwSDSt8N5GayPJAzMYS_PvWXl1kux6m78/exec";
+
+    const rooms =
+      document.querySelectorAll(".room");
+
+    const roomInput =
+      document.getElementById("room");
+
+    const form =
+      document.getElementById("leadForm");
+
+    const successBox =
+      document.getElementById("success");
+
+    const submitBtn =
+      form.querySelector(".cta");
+
+
+    rooms.forEach(btn => {
+
+      btn.addEventListener("click", () => {
+
+        rooms.forEach(x =>
+          x.classList.remove("active")
+        );
+
+        btn.classList.add("active");
+
+        roomInput.value =
+          btn.dataset.room;
+
+      });
+
     });
 
-    const params = new URLSearchParams(location.search);
-    const utm = {};
-    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(k => utm[k]=params.get(k)||'');
 
-    const form = document.getElementById('lead-form');
-    const status = document.getElementById('status');
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      status.className = 'status'; status.textContent = '';
-      const name = document.getElementById('name').value.trim();
-      const phoneValue = phone.value.trim();
-      const phoneDigits = phoneValue.replace(/\D/g,'');
-      if (!name || phoneDigits.length !== 12) {
-        status.className = 'status err';
-        status.textContent = 'Ism va telefon raqamingizni to‘liq kiriting.';
-        return;
+    function getUTM(name){
+
+      return new URLSearchParams(
+        window.location.search
+      ).get(name) || "";
+
+    }
+
+
+    form.addEventListener(
+      "submit",
+      async function(e){
+
+        e.preventDefault();
+
+
+        const name =
+          document
+          .getElementById("name")
+          .value
+          .trim();
+
+
+        const phone =
+          document
+          .getElementById("phone")
+          .value
+          .trim();
+
+
+        const room =
+          roomInput.value;
+
+
+        if(!name || !phone){
+
+          successBox.style.display =
+            "block";
+
+          successBox.style.background =
+            "#fff1f1";
+
+          successBox.style.color =
+            "#a33";
+
+          successBox.textContent =
+            "Iltimos, ism va telefon raqamingizni kiriting.";
+
+          return;
+
+        }
+
+
+        const payload =
+          new URLSearchParams();
+
+
+        payload.append(
+          "name",
+          name
+        );
+
+
+        payload.append(
+          "phone",
+          phone
+        );
+
+
+        payload.append(
+          "room",
+          room
+        );
+
+
+        payload.append(
+          "source",
+          getUTM("utm_source")
+        );
+
+
+        payload.append(
+          "campaign",
+          getUTM("utm_campaign")
+        );
+
+
+        payload.append(
+          "content",
+          getUTM("utm_content")
+        );
+
+
+        submitBtn.disabled =
+          true;
+
+
+        submitBtn.textContent =
+          "Yuborilmoqda...";
+
+
+        try{
+
+          await fetch(
+            SCRIPT_URL,
+            {
+              method:"POST",
+
+              mode:"no-cors",
+
+              headers:{
+                "Content-Type":
+                "application/x-www-form-urlencoded"
+              },
+
+              body:
+                payload.toString()
+            }
+          );
+
+
+          successBox.style.display =
+            "block";
+
+
+          successBox.style.background =
+            "#f3f8f1";
+
+
+          successBox.style.color =
+            "#315b2a";
+
+
+          successBox.textContent =
+            "Arizangiz qabul qilindi. Menejerimiz tez orada siz bilan bog‘lanadi.";
+
+
+          form.reset();
+
+
+          rooms.forEach(
+            x =>
+            x.classList.remove("active")
+          );
+
+
+          rooms[0]
+            .classList
+            .add("active");
+
+
+          roomInput.value =
+            "1 xonali";
+
+
+        }
+
+        catch(err){
+
+          successBox.style.display =
+            "block";
+
+
+          successBox.style.background =
+            "#fff1f1";
+
+
+          successBox.style.color =
+            "#a33";
+
+
+          successBox.textContent =
+            "Arizani yuborishda xatolik yuz berdi. Qayta urinib ko‘ring.";
+
+        }
+
+        finally{
+
+          submitBtn.disabled =
+            false;
+
+
+          submitBtn.textContent =
+            "Xonadon narxlari bilan tanishish →";
+
+        }
+
       }
-      const btn = form.querySelector('.submit');
-      btn.disabled = true; btn.firstElementChild.textContent = 'Yuborilmoqda...';
-      try {
-        const res = await fetch('/api/lead', {
-          method:'POST', headers:{'Content-Type':'application/json'},
-          body:JSON.stringify({name, phone:phoneValue, rooms:selectedRoom, ...utm, page:location.href, referrer:document.referrer})
-        });
-        const data = await res.json().catch(()=>({}));
-        if (!res.ok) throw new Error(data.error || 'Yuborishda xatolik');
-        status.className = 'status ok';
-        status.textContent = 'Rahmat! Arizangiz qabul qilindi. Menejerimiz siz bilan bog‘lanadi.';
-        form.reset(); selectedRoom='1 xonali'; rooms.forEach((x,i)=>x.classList.toggle('active',i===0));
-      } catch(err) {
-        status.className = 'status err';
-        status.textContent = 'Arizani yuborib bo‘lmadi. Telegram integratsiyasini tekshiring.';
-      } finally {
-        btn.disabled = false; btn.firstElementChild.textContent = 'Xonadon narxlari bilan tanishish';
-      }
-    });
+    );
+
   </script>
+
 </body>
 </html>
