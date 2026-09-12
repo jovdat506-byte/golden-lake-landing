@@ -1,17 +1,25 @@
 <!doctype html>
 <html lang="uz">
+
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-  <title>Golden Lake — Mirobod tumanida Comfort Plus xonadonlar</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+
+  <title>
+    Golden Lake — Mirobod tumanida Comfort Plus xonadonlar
+  </title>
 
   <meta
     name="description"
-    content="Golden Lake — Mirobod tumanida Comfort Plus xonadonlar. Barcha xonadonlar uchun 30% chegirma."
+    content="Golden Lake — Mirobod tumanida Comfort Plus xonadonlar."
   />
 
   <style>
+
     :root {
       --bg: #fbfaf7;
       --text: #121827;
@@ -22,16 +30,20 @@
       --card: #ffffff;
     }
 
+
     * {
       box-sizing: border-box;
     }
+
 
     html {
       scroll-behavior: smooth;
     }
 
+
     body {
       margin: 0;
+
       font-family:
         Inter,
         ui-sans-serif,
@@ -42,320 +54,550 @@
         sans-serif;
 
       background: var(--bg);
+
       color: var(--text);
     }
+
 
     button,
     input {
       font: inherit;
     }
 
+
     .wrap {
-      width: min(1180px, calc(100% - 32px));
+      width: min(
+        1180px,
+        calc(100% - 32px)
+      );
+
       margin: 0 auto;
     }
 
-    /* HEADER */
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
 
     header {
       height: 76px;
+
       display: flex;
+
       align-items: center;
     }
+
 
     .nav {
       width: 100%;
+
       display: flex;
+
       align-items: center;
-      justify-content: space-between;
-      gap: 16px;
+
+      justify-content: flex-start;
     }
+
 
     .brand {
       font-size: 30px;
+
       line-height: 1;
+
       font-weight: 800;
+
       letter-spacing: -0.04em;
     }
+
 
     .brand span {
       color: var(--gold);
     }
 
-    .lang {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--muted);
-      white-space: nowrap;
-    }
 
-    .lang b {
-      color: var(--gold);
-    }
 
-    /* MAIN */
+    /* =========================
+       MAIN
+    ========================= */
+
 
     main {
-      padding: 14px 0 44px;
+      padding:
+        14px 0 44px;
     }
 
+
     .hero-grid {
+
       display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
+
+      grid-template-columns:
+        1.08fr .92fr;
+
       gap: 34px;
+
       align-items: start;
     }
 
-    /* OFFER */
+
+
+    /* =========================
+       OFFER BADGE
+    ========================= */
+
 
     .offer-badge {
+
       display: inline-flex;
+
       align-items: center;
-      gap: 8px;
 
-      padding: 9px 14px;
+      padding:
+        9px 14px;
 
-      border: 1px solid var(--gold2);
-      border-radius: 999px;
+      border:
+        1px solid var(--gold2);
 
-      font-weight: 800;
-      color: #94611d;
+      border-radius:
+        999px;
 
-      background: #fffaf1;
+      font-weight:
+        800;
 
-      margin-bottom: 18px;
+      color:
+        #94611d;
+
+      background:
+        #fffaf1;
+
+      margin-bottom:
+        18px;
     }
 
-    /* HEADLINE */
+
+
+    /* =========================
+       HEADLINE
+    ========================= */
+
 
     h1 {
+
       margin: 0;
 
-      font-size: clamp(48px, 5.3vw, 78px);
-      line-height: 0.95;
+      font-size:
+        clamp(
+          48px,
+          5.3vw,
+          78px
+        );
 
-      letter-spacing: -0.055em;
+      line-height:
+        .95;
 
-      max-width: 720px;
+      letter-spacing:
+        -.055em;
+
+      max-width:
+        720px;
+
+      margin-bottom:
+        24px;
     }
+
 
     h1 .accent {
-      color: var(--gold);
+      color:
+        var(--gold);
     }
 
-    .sub {
-      margin: 22px 0 8px;
 
-      font-size: 24px;
-      line-height: 1.2;
-      font-weight: 800;
-    }
 
-    .micro {
-      margin: 0 0 22px;
+    /* =========================
+       HERO IMAGE
+    ========================= */
 
-      color: var(--muted);
-      font-size: 16px;
-    }
-
-    /* HERO IMAGE */
 
     .visual {
-      position: relative;
-      overflow: hidden;
 
-      border-radius: 28px;
+      position:
+        relative;
 
-      min-height: 420px;
+      overflow:
+        hidden;
 
-      background: #d7dce2;
+      border-radius:
+        28px;
+
+      min-height:
+        420px;
+
+      background:
+        #d7dce2;
 
       box-shadow:
-        0 18px 50px rgba(33, 26, 16, 0.10);
+        0 18px 50px
+        rgba(
+          33,
+          26,
+          16,
+          .10
+        );
     }
+
 
     .visual img {
-      width: 100%;
-      height: 100%;
 
-      min-height: 420px;
+      width:
+        100%;
 
-      object-fit: cover;
-      display: block;
+      height:
+        100%;
+
+      min-height:
+        420px;
+
+      object-fit:
+        cover;
+
+      display:
+        block;
     }
 
+
     .visual::after {
-      content: "";
 
-      position: absolute;
+      content:
+        "";
 
-      left: 0;
-      right: 0;
-      bottom: 0;
+      position:
+        absolute;
 
-      height: 46%;
+      left:
+        0;
+
+      right:
+        0;
+
+      bottom:
+        0;
+
+      height:
+        46%;
 
       background:
         linear-gradient(
           transparent,
-          rgba(0, 0, 0, 0.54)
+          rgba(
+            0,
+            0,
+            0,
+            .54
+          )
         );
 
-      pointer-events: none;
+      pointer-events:
+        none;
     }
+
 
     .visual-copy {
-      position: absolute;
 
-      left: 22px;
-      right: 22px;
-      bottom: 20px;
+      position:
+        absolute;
 
-      z-index: 2;
+      left:
+        22px;
 
-      color: #ffffff;
+      right:
+        22px;
+
+      bottom:
+        20px;
+
+      z-index:
+        2;
+
+      color:
+        #ffffff;
     }
+
 
     .visual-copy strong {
-      display: block;
 
-      font-size: 22px;
+      display:
+        block;
 
-      margin-bottom: 4px;
+      font-size:
+        22px;
+
+      margin-bottom:
+        4px;
     }
+
 
     .visual-copy span {
-      font-size: 14px;
-      opacity: 0.9;
+
+      font-size:
+        14px;
+
+      opacity:
+        .9;
     }
 
-    /* STATS */
+
+
+    /* =========================
+       STATS
+    ========================= */
+
 
     .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
 
-      gap: 12px;
+      display:
+        grid;
 
-      margin-top: 16px;
+      grid-template-columns:
+        repeat(
+          3,
+          1fr
+        );
+
+      gap:
+        12px;
+
+      margin-top:
+        16px;
     }
+
 
     .stat {
-      background: var(--card);
 
-      border: 1px solid var(--line);
-      border-radius: 20px;
+      background:
+        var(--card);
 
-      padding: 16px;
+      border:
+        1px solid var(--line);
 
-      min-height: 108px;
+      border-radius:
+        20px;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      padding:
+        16px;
+
+      min-height:
+        108px;
+
+      display:
+        flex;
+
+      flex-direction:
+        column;
+
+      justify-content:
+        center;
     }
+
 
     .stat b {
-      font-size: 24px;
-      margin-bottom: 3px;
+
+      font-size:
+        24px;
+
+      margin-bottom:
+        3px;
     }
+
 
     .stat span {
-      color: var(--muted);
-      font-size: 14px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        14px;
     }
 
-    /* FORM */
+
+
+    /* =========================
+       FORM
+    ========================= */
+
 
     .form-card {
+
       background:
-        rgba(255, 255, 255, 0.94);
+        rgba(
+          255,
+          255,
+          255,
+          .94
+        );
 
-      border: 1px solid var(--line);
-      border-radius: 28px;
+      border:
+        1px solid var(--line);
 
-      padding: 26px;
+      border-radius:
+        28px;
+
+      padding:
+        26px;
 
       box-shadow:
-        0 18px 55px rgba(43, 31, 13, 0.07);
+        0 18px 55px
+        rgba(
+          43,
+          31,
+          13,
+          .07
+        );
     }
+
 
     .form-card h2 {
-      margin: 0 0 6px;
 
-      font-size: 28px;
-      line-height: 1.08;
+      margin:
+        0 0 6px;
 
-      letter-spacing: -0.03em;
+      font-size:
+        28px;
+
+      line-height:
+        1.08;
+
+      letter-spacing:
+        -.03em;
     }
+
 
     .form-card .hint {
-      margin: 0 0 20px;
 
-      color: var(--muted);
-      font-size: 14px;
+      margin:
+        0 0 20px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        14px;
     }
+
 
     label {
-      display: block;
 
-      font-size: 13px;
-      font-weight: 800;
+      display:
+        block;
 
-      margin: 14px 0 7px;
+      font-size:
+        13px;
+
+      font-weight:
+        800;
+
+      margin:
+        14px 0 7px;
     }
+
 
     input {
-      width: 100%;
-      height: 54px;
 
-      border: 1px solid #d8dce3;
-      border-radius: 15px;
+      width:
+        100%;
 
-      background: #ffffff;
+      height:
+        54px;
 
-      padding: 0 15px;
+      border:
+        1px solid #d8dce3;
 
-      font-size: 16px;
+      border-radius:
+        15px;
 
-      outline: none;
+      background:
+        #ffffff;
+
+      padding:
+        0 15px;
+
+      font-size:
+        16px;
+
+      outline:
+        none;
     }
+
 
     input:focus {
-      border-color: var(--gold);
+
+      border-color:
+        var(--gold);
 
       box-shadow:
-        0 0 0 3px rgba(201, 144, 63, 0.12);
+        0 0 0 3px
+        rgba(
+          201,
+          144,
+          63,
+          .12
+        );
     }
 
-    /* ROOM BUTTONS */
+
+
+    /* =========================
+       ROOM BUTTONS
+    ========================= */
+
 
     .rooms {
-      display: grid;
 
-      grid-template-columns: repeat(4, 1fr);
+      display:
+        grid;
 
-      gap: 8px;
+      grid-template-columns:
+        repeat(
+          4,
+          1fr
+        );
 
-      margin-top: 8px;
+      gap:
+        8px;
+
+      margin-top:
+        8px;
     }
+
 
     .room {
-      border: 1px solid #e6e1d8;
 
-      background: #f7f4ef;
+      border:
+        1px solid #e6e1d8;
 
-      border-radius: 999px;
+      background:
+        #f7f4ef;
 
-      padding: 12px 6px;
+      border-radius:
+        999px;
 
-      font-weight: 800;
-      color: #303846;
+      padding:
+        12px 6px;
 
-      cursor: pointer;
+      font-weight:
+        800;
+
+      color:
+        #303846;
+
+      cursor:
+        pointer;
     }
+
 
     .room.active {
+
       background:
         linear-gradient(
           135deg,
@@ -363,24 +605,39 @@
           var(--gold)
         );
 
-      border-color: transparent;
+      border-color:
+        transparent;
 
-      color: #ffffff;
+      color:
+        #ffffff;
     }
 
-    /* CTA */
+
+
+    /* =========================
+       CTA
+    ========================= */
+
 
     .cta {
-      width: 100%;
 
-      border: none;
-      border-radius: 16px;
+      width:
+        100%;
 
-      min-height: 58px;
+      border:
+        none;
 
-      padding: 14px 18px;
+      border-radius:
+        16px;
 
-      margin-top: 18px;
+      min-height:
+        58px;
+
+      padding:
+        14px 18px;
+
+      margin-top:
+        18px;
 
       background:
         linear-gradient(
@@ -389,238 +646,387 @@
           var(--gold)
         );
 
-      color: #ffffff;
+      color:
+        #ffffff;
 
-      font-size: 16px;
-      font-weight: 900;
+      font-size:
+        16px;
 
-      cursor: pointer;
+      font-weight:
+        900;
 
-      transition: 0.2s ease;
+      cursor:
+        pointer;
     }
 
-    .cta:hover {
-      transform: translateY(-1px);
-    }
 
     .cta:disabled {
-      opacity: 0.65;
-      cursor: not-allowed;
-      transform: none;
+
+      opacity:
+        .6;
+
+      cursor:
+        not-allowed;
     }
 
-    /* SUCCESS */
+
+
+    /* =========================
+       MESSAGE
+    ========================= */
+
 
     .message {
-      display: none;
 
-      margin-top: 14px;
+      display:
+        none;
 
-      padding: 13px 14px;
+      margin-top:
+        14px;
 
-      border-radius: 14px;
+      padding:
+        13px 14px;
 
-      font-size: 13px;
-      font-weight: 700;
+      border-radius:
+        14px;
 
-      line-height: 1.4;
+      font-size:
+        13px;
+
+      font-weight:
+        700;
+
+      line-height:
+        1.4;
     }
+
 
     .message.success {
-      display: block;
 
-      background: #f1f8ef;
-      color: #315b2a;
+      display:
+        block;
 
-      border: 1px solid #d6ead0;
+      background:
+        #f1f8ef;
+
+      color:
+        #315b2a;
+
+      border:
+        1px solid #d6ead0;
     }
+
 
     .message.error {
-      display: block;
 
-      background: #fff1f1;
-      color: #9f3333;
+      display:
+        block;
 
-      border: 1px solid #f0cccc;
+      background:
+        #fff1f1;
+
+      color:
+        #9f3333;
+
+      border:
+        1px solid #f0cccc;
     }
+
 
     .trust {
-      margin: 11px 0 0;
 
-      font-size: 12px;
-      line-height: 1.4;
+      margin:
+        11px 0 0;
 
-      color: var(--muted);
+      font-size:
+        12px;
 
-      text-align: center;
+      line-height:
+        1.4;
+
+      color:
+        var(--muted);
+
+      text-align:
+        center;
     }
 
-    /* TABLET */
 
-    @media (max-width: 860px) {
+
+    /* =========================
+       TABLET / MOBILE
+    ========================= */
+
+
+    @media (
+      max-width:
+      860px
+    ) {
+
 
       .wrap {
-        width: min(100% - 24px, 680px);
+
+        width:
+          min(
+            100% - 24px,
+            680px
+          );
       }
+
 
       header {
-        height: 64px;
+        height:
+          64px;
       }
 
+
       .brand {
-        font-size: 26px;
+        font-size:
+          26px;
       }
+
 
       main {
-        padding-top: 6px;
+        padding-top:
+          6px;
       }
+
 
       .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
+
+        grid-template-columns:
+          1fr;
+
+        gap:
+          16px;
       }
+
 
       .offer-badge {
-        margin-bottom: 14px;
-        font-size: 14px;
+
+        margin-bottom:
+          14px;
+
+        font-size:
+          14px;
       }
+
 
       h1 {
+
         font-size:
-          clamp(44px, 12vw, 68px);
+          clamp(
+            44px,
+            12vw,
+            68px
+          );
+
+        margin-bottom:
+          20px;
       }
 
-      .sub {
-        font-size: 20px;
-        margin-top: 18px;
-      }
-
-      .micro {
-        font-size: 14px;
-        margin-bottom: 16px;
-      }
 
       .visual {
-        min-height: 330px;
-        border-radius: 24px;
+
+        min-height:
+          330px;
+
+        border-radius:
+          24px;
       }
+
 
       .visual img {
-        min-height: 330px;
+
+        min-height:
+          330px;
       }
+
 
       .stats {
-        gap: 8px;
+
+        gap:
+          8px;
       }
+
 
       .stat {
-        padding: 13px;
 
-        min-height: 92px;
+        padding:
+          13px;
 
-        border-radius: 16px;
+        min-height:
+          92px;
+
+        border-radius:
+          16px;
       }
+
 
       .stat b {
-        font-size: 20px;
+
+        font-size:
+          20px;
       }
 
+
       .stat span {
-        font-size: 12px;
+
+        font-size:
+          12px;
       }
+
 
       .form-card {
-        padding: 20px;
-        border-radius: 24px;
+
+        padding:
+          20px;
+
+        border-radius:
+          24px;
       }
+
 
       .form-card h2 {
-        font-size: 24px;
+
+        font-size:
+          24px;
       }
+
     }
 
-    /* MOBILE */
 
-    @media (max-width: 460px) {
+
+    @media (
+      max-width:
+      460px
+    ) {
+
 
       .wrap {
+
         width:
-          calc(100% - 20px);
+          calc(
+            100% - 20px
+          );
       }
+
 
       header {
-        height: 58px;
+
+        height:
+          58px;
       }
+
 
       .brand {
-        font-size: 24px;
+
+        font-size:
+          24px;
       }
 
-      .lang {
-        font-size: 12px;
-      }
 
       h1 {
-        font-size: 44px;
+
+        font-size:
+          44px;
+
+        margin-bottom:
+          18px;
       }
 
-      .sub {
-        font-size: 18px;
-      }
 
       .visual {
-        min-height: 285px;
+
+        min-height:
+          285px;
       }
+
 
       .visual img {
-        min-height: 285px;
+
+        min-height:
+          285px;
       }
+
 
       .visual-copy strong {
-        font-size: 18px;
+
+        font-size:
+          18px;
       }
+
 
       .stats {
+
         grid-template-columns:
-          repeat(3, 1fr);
+          repeat(
+            3,
+            1fr
+          );
       }
+
 
       .stat {
-        padding: 10px 8px;
 
-        min-height: 82px;
+        padding:
+          10px 8px;
+
+        min-height:
+          82px;
       }
+
 
       .stat b {
-        font-size: 17px;
+
+        font-size:
+          17px;
       }
+
 
       .stat span {
-        font-size: 11px;
+
+        font-size:
+          11px;
       }
 
+
       .rooms {
+
         grid-template-columns:
-          repeat(2, 1fr);
+          repeat(
+            2,
+            1fr
+          );
       }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
-  <!-- HEADER -->
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
 
   <header class="wrap">
 
     <div class="nav">
 
       <div class="brand">
-        Golden <span>Lake</span>
-      </div>
 
-      <div class="lang">
-        <b>UZ</b> &nbsp;|&nbsp; RU
+        Golden
+
+        <span>
+          Lake
+        </span>
+
       </div>
 
     </div>
@@ -628,19 +1034,28 @@
   </header>
 
 
-  <!-- MAIN -->
+
+  <!-- =========================
+       MAIN
+  ========================== -->
+
 
   <main class="wrap">
+
 
     <div class="hero-grid">
 
 
-      <!-- LEFT SIDE -->
+      <!-- LEFT -->
+
 
       <section>
 
+
         <div class="offer-badge">
+
           30% chegirma
+
         </div>
 
 
@@ -657,19 +1072,12 @@
         </h1>
 
 
-        <p class="sub">
-          Barcha xonadonlar uchun 30% chegirma
-        </p>
 
+        <!-- HERO IMAGE -->
 
-        <p class="micro">
-          4.4 GA maydon, 72% infratuzilma va yer osti parkovka
-        </p>
-
-
-        <!-- IMAGE -->
 
         <div class="visual">
+
 
           <img
             src="assets/hero.webp"
@@ -679,22 +1087,33 @@
 
           <div class="visual-copy">
 
+
             <strong>
+
               Miroboddagi zamonaviy yashash muhiti
+
             </strong>
 
+
             <span>
+
               Golden Lake · Toshkent
+
             </span>
 
+
           </div>
+
 
         </div>
 
 
+
         <!-- STATS -->
 
+
         <div class="stats">
+
 
           <div class="stat">
 
@@ -734,35 +1153,46 @@
 
           </div>
 
+
         </div>
+
 
       </section>
 
 
-      <!-- FORM -->
+
+      <!-- =========================
+           FORM
+      ========================== -->
+
 
       <aside
         class="form-card"
         id="lead"
       >
 
+
         <h2>
+
           Xonadon narxlari bilan tanishing
+
         </h2>
 
 
         <p class="hint">
+
           Ma’lumot olish uchun qisqa formani to‘ldiring.
+
         </p>
 
 
         <form id="leadForm">
 
 
-          <!-- NAME -->
-
           <label for="name">
+
             Ismingiz
+
           </label>
 
 
@@ -776,10 +1206,10 @@
           />
 
 
-          <!-- PHONE -->
-
           <label for="phone">
+
             Telefon raqamingiz
+
           </label>
 
 
@@ -788,27 +1218,30 @@
             name="phone"
             type="tel"
             inputmode="tel"
-            autocomplete="tel"
             placeholder="+998 90 123 45 67"
+            autocomplete="tel"
             required
           />
 
 
-          <!-- ROOM -->
-
           <label>
+
             Necha xonali xonadon haqida ma’lumot olmoqchisiz?
+
           </label>
 
 
           <div class="rooms">
+
 
             <button
               type="button"
               class="room active"
               data-room="1 xonali"
             >
+
               1 xonali
+
             </button>
 
 
@@ -817,7 +1250,9 @@
               class="room"
               data-room="2 xonali"
             >
+
               2 xonali
+
             </button>
 
 
@@ -826,7 +1261,9 @@
               class="room"
               data-room="3 xonali"
             >
+
               3 xonali
+
             </button>
 
 
@@ -835,8 +1272,11 @@
               class="room"
               data-room="+4 xonali"
             >
+
               +4 xonali
+
             </button>
+
 
           </div>
 
@@ -849,18 +1289,16 @@
           />
 
 
-          <!-- CTA -->
-
           <button
             class="cta"
             id="submitBtn"
             type="submit"
           >
+
             Xonadon narxlari bilan tanishish →
+
           </button>
 
-
-          <!-- MESSAGE -->
 
           <div
             class="message"
@@ -869,87 +1307,127 @@
 
 
           <p class="trust">
+
             Ma’lumotlaringiz faqat Golden Lake bo‘yicha bog‘lanish uchun ishlatiladi.
+
           </p>
 
 
         </form>
 
+
       </aside>
 
+
     </div>
+
 
   </main>
 
 
-  <!-- JAVASCRIPT -->
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
 
   <script>
 
-    /* GOOGLE APPS SCRIPT URL */
 
     const SCRIPT_URL =
       "https://script.google.com/macros/s/AKfycbwSBOCCXFArpgd0j4RD3DyCqXCCNY3DBKvwSDSt8N5GayPJAzMYS_PvWXl1kux6m78/exec";
 
 
-    /* ELEMENTS */
 
     const form =
-      document.getElementById("leadForm");
+      document.getElementById(
+        "leadForm"
+      );
 
 
     const nameInput =
-      document.getElementById("name");
+      document.getElementById(
+        "name"
+      );
 
 
     const phoneInput =
-      document.getElementById("phone");
+      document.getElementById(
+        "phone"
+      );
 
 
     const roomInput =
-      document.getElementById("room");
+      document.getElementById(
+        "room"
+      );
 
 
     const roomButtons =
-      document.querySelectorAll(".room");
+      document.querySelectorAll(
+        ".room"
+      );
 
 
     const submitBtn =
-      document.getElementById("submitBtn");
+      document.getElementById(
+        "submitBtn"
+      );
 
 
     const message =
-      document.getElementById("message");
-
-
-    /* ROOM SELECTION */
-
-    roomButtons.forEach(button => {
-
-      button.addEventListener(
-        "click",
-        function() {
-
-          roomButtons.forEach(btn => {
-            btn.classList.remove("active");
-          });
-
-
-          this.classList.add("active");
-
-
-          roomInput.value =
-            this.dataset.room;
-
-        }
+      document.getElementById(
+        "message"
       );
 
-    });
 
 
-    /* GET UTM */
+    /* ROOM SELECT */
 
-    function getUTM(parameter) {
+
+    roomButtons.forEach(
+      button => {
+
+        button.addEventListener(
+          "click",
+          function () {
+
+
+            roomButtons.forEach(
+              btn => {
+
+                btn.classList.remove(
+                  "active"
+                );
+
+              }
+            );
+
+
+            this.classList.add(
+              "active"
+            );
+
+
+            roomInput.value =
+              this.dataset.room;
+
+
+          }
+        );
+
+      }
+    );
+
+
+
+    /* UTM */
+
+
+    function getUTM(
+      parameter
+    ) {
+
 
       const params =
         new URLSearchParams(
@@ -957,17 +1435,25 @@
         );
 
 
-      return params.get(parameter) || "";
+      return (
+        params.get(
+          parameter
+        ) || ""
+      );
+
 
     }
 
 
-    /* SHOW MESSAGE */
+
+    /* MESSAGE */
+
 
     function showMessage(
       text,
       type
     ) {
+
 
       message.className =
         "message " + type;
@@ -976,60 +1462,77 @@
       message.textContent =
         text;
 
+
     }
 
 
-    /* SUBMIT FORM */
+
+    /* FORM SUBMIT */
+
 
     form.addEventListener(
       "submit",
-      async function(event) {
+      async function (
+        event
+      ) {
+
 
         event.preventDefault();
 
 
+
         const name =
-          nameInput.value.trim();
+          nameInput
+            .value
+            .trim();
 
 
         const phone =
-          phoneInput.value.trim();
+          phoneInput
+            .value
+            .trim();
 
 
         const room =
           roomInput.value;
 
 
-        /* VALIDATION */
 
         if (!name) {
+
 
           showMessage(
             "Iltimos, ismingizni kiriting.",
             "error"
           );
 
+
           return;
+
 
         }
 
 
+
         if (!phone) {
+
 
           showMessage(
             "Iltimos, telefon raqamingizni kiriting.",
             "error"
           );
 
+
           return;
+
 
         }
 
 
-        /* DATA */
 
         const data =
           new URLSearchParams();
+
 
 
         data.append(
@@ -1052,23 +1555,28 @@
 
         data.append(
           "source",
-          getUTM("utm_source") || "website"
+          getUTM(
+            "utm_source"
+          ) || "website"
         );
 
 
         data.append(
           "campaign",
-          getUTM("utm_campaign")
+          getUTM(
+            "utm_campaign"
+          )
         );
 
 
         data.append(
           "content",
-          getUTM("utm_content")
+          getUTM(
+            "utm_content"
+          )
         );
 
 
-        /* LOADING */
 
         submitBtn.disabled =
           true;
@@ -1076,6 +1584,7 @@
 
         submitBtn.textContent =
           "Yuborilmoqda...";
+
 
 
         message.className =
@@ -1086,78 +1595,94 @@
           "";
 
 
+
         try {
 
-          /* SEND TO GOOGLE SHEETS */
 
           await fetch(
             SCRIPT_URL,
             {
 
-              method: "POST",
+              method:
+                "POST",
 
-              mode: "no-cors",
+              mode:
+                "no-cors",
 
-              body: data
+              body:
+                data
 
             }
           );
 
 
-          /* SUCCESS */
 
           showMessage(
+
             "Arizangiz qabul qilindi. Menejerimiz tez orada siz bilan bog‘lanadi.",
+
             "success"
+
           );
 
 
-          /* RESET */
 
           form.reset();
 
 
+
           roomButtons.forEach(
-            btn =>
-              btn.classList.remove("active")
+            btn => {
+
+              btn.classList.remove(
+                "active"
+              );
+
+            }
           );
+
 
 
           roomButtons[0]
             .classList
-            .add("active");
+            .add(
+              "active"
+            );
+
 
 
           roomInput.value =
             "1 xonali";
 
 
-          /* SCROLL MESSAGE */
-
-          message.scrollIntoView({
-            behavior: "smooth",
-            block: "nearest"
-          });
-
 
         }
 
-        catch (error) {
+
+        catch (
+          error
+        ) {
+
 
           console.error(
-            "Lead yuborishda xatolik:",
             error
           );
 
 
           showMessage(
-            "Arizani yuborishda xatolik yuz berdi. Iltimos, qayta urinib ko‘ring.",
+
+            "Arizani yuborishda xatolik yuz berdi.",
+
             "error"
+
           );
+
 
         }
 
+
         finally {
+
 
           submitBtn.disabled =
             false;
@@ -1166,12 +1691,17 @@
           submitBtn.textContent =
             "Xonadon narxlari bilan tanishish →";
 
+
         }
+
 
       }
     );
 
+
   </script>
 
+
 </body>
+
 </html>
