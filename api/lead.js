@@ -1,42 +1,71 @@
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwSBOCCXFArpgd0j4RD3DyCqXCCNY3DBKvwSDSt8N5GayPJAzMYS_PvWXl1kux6m78/exec";
+
+function parseBody(req) {
+  if (!req.body) return {};
+  if (typeof req.body === "object") return req.body;
+  try {
+    return JSON.parse(req.body);
+  } catch {
+    return Object.fromEntries(new URLSearchParams(req.body));
+  }
+}
+
 export default async function handler(req, res) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== "POST") {
+    res.setHeader("Allow", "POST");
+    return res.status(405).json({ ok: false, error: "Method not allowed" });
+  }
 
   try {
-    const { name, phone, rooms, utm_source, utm_medium, utm_campaign, utm_content, utm_term, page, referrer } = req.body || {};
-    if (!name || !phone || !rooms) return res.status(400).json({ error: 'Required fields missing' });
+    const body = parseBody(req);
+    const name = String(body.name || "").trim();
+    const phone = String(body.phone || "").trim();
+    const room = String(body.room || "").trim();
+    const source = String(body.source || "website").trim();
+    const campaign = String(body.campaign || "").trim();
+    const content = String(body.content || "").trim();
 
-    const token = process.env.TELEGRAM_BOT_TOKEN;
-    const chatId = process.env.TELEGRAM_CHAT_ID;
-    if (!token || !chatId) return res.status(500).json({ error: 'Telegram env variables are not configured' });
+    if (!name || !phone) {
+      return res.status(400).json({ ok: false, error: "Name and phone are required" });
+    }
 
-    const safe = v => String(v || '-').replace(/[<>]/g, '');
-    const text = [
-      '🏙️ Yangi Golden Lake lead',
-      '',
-      `👤 Ism: ${safe(name)}`,
-      `📞 Telefon: ${safe(phone)}`,
-      `🏠 Xonadon: ${safe(rooms)}`,
-      '',
-      '📊 UTM:',
-      `source: ${safe(utm_source)}`,
-      `medium: ${safe(utm_medium)}`,
-      `campaign: ${safe(utm_campaign)}`,
-      `content: ${safe(utm_content)}`,
-      `term: ${safe(utm_term)}`,
-      '',
-      `🔗 Page: ${safe(page)}`,
-      `↩️ Referrer: ${safe(referrer)}`
-    ].join('\n');
+    const params = new URLSearchParams();
+    params.set("name", name);
+    params.set("phone", phone.startsWith("'") ? phone : "'" + phone);
+    params.set("room", room);
+    params.set("source", source);
+    params.set("campaign", campaign);
+    params.set("content", content);
 
-    const tg = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ chat_id: chatId, text })
+    const upstream = await fetch(SCRIPT_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+      body: params.toString(),
+      redirect: "follow"
     });
-    const data = await tg.json();
-    if (!tg.ok || !data.ok) return res.status(502).json({ error: 'Telegram API error' });
+
+    const text = await upstream.text();
+    const accepted =
+      upstream.ok &&
+      (
+        /^OK\b/i.test(text.trim()) ||
+        /"success"\s*:\s*true/i.test(text) ||
+        /success\s*[:=]\s*true/i.test(text)
+      );
+
+    if (!accepted) {
+      console.error("Apps Script rejected lead", upstream.status, text);
+      return res.status(502).json({
+        ok: false,
+        error: "Google Sheets endpoint rejected the lead",
+        upstreamStatus: upstream.status,
+        upstream: text.slice(0, 300)
+      });
+    }
+
     return res.status(200).json({ ok: true });
-  } catch (e) {
-    return res.status(500).json({ error: 'Server error' });
+  } catch (error) {
+    console.error("Lead API error", error);
+    return res.status(500).json({ ok: false, error: error.message || "Internal error" });
   }
 }
