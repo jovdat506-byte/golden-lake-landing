@@ -2,12 +2,15 @@
 <html lang="uz">
 <head>
   <meta charset="utf-8" />
+
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1, viewport-fit=cover"
   />
 
-  <title>Golden Lake — Mirobod tumanida Comfort Plus xonadonlar</title>
+  <title>
+    Golden Lake — Mirobod tumanida Comfort Plus xonadonlar
+  </title>
 
   <meta
     name="description"
@@ -502,6 +505,8 @@
         target="leadFrame"
       >
 
+        <!-- ISM -->
+
         <label
           class="form-label"
           for="name"
@@ -519,17 +524,19 @@
           required
         />
 
+
+        <!-- TELEFON -->
+
         <label
           class="form-label"
-          for="phone"
+          for="phoneDisplay"
         >
           Telefon raqamingiz
         </label>
 
         <input
           class="text-input"
-          id="phone"
-          name="phone"
+          id="phoneDisplay"
           type="tel"
           inputmode="tel"
           placeholder="+998 90 123 45 67"
@@ -537,17 +544,28 @@
           required
         />
 
+        <!-- Sheetsga ketadigan telefon -->
+
+        <input
+          type="hidden"
+          id="phone"
+          name="phone"
+          value=""
+        />
+
+
+        <!-- XONA -->
+
         <label
           class="form-label"
-          for="room"
+          for="roomSelect"
         >
           Necha xonali xonadon haqida ma’lumot olmoqchisiz?
         </label>
 
         <select
           class="room-select"
-          id="room"
-          name="room"
+          id="roomSelect"
           required
         >
 
@@ -571,11 +589,23 @@
             3 xonali
           </option>
 
-          <option value="4 xonali va undan kop">
+          <option value="4 xonali">
             +4 xonali
           </option>
 
         </select>
+
+        <!-- Sheetsga ketadigan xona -->
+
+        <input
+          type="hidden"
+          id="room"
+          name="room"
+          value=""
+        />
+
+
+        <!-- UTM -->
 
         <input
           type="hidden"
@@ -598,6 +628,9 @@
           value=""
         />
 
+
+        <!-- SUBMIT -->
+
         <button
           class="cta"
           id="submitBtn"
@@ -606,16 +639,19 @@
           Xonadon narxlari bilan tanishish →
         </button>
 
+
         <div
           class="message"
           id="message"
         ></div>
+
 
         <p class="trust">
           Ma’lumotlaringiz faqat Golden Lake bo‘yicha bog‘lanish uchun ishlatiladi.
         </p>
 
       </form>
+
 
       <iframe
         name="leadFrame"
@@ -629,6 +665,7 @@
 
 </main>
 
+
 <script>
 
   const form =
@@ -637,11 +674,26 @@
   const nameInput =
     document.getElementById("name");
 
+  const phoneDisplay =
+    document.getElementById("phoneDisplay");
+
   const phoneInput =
     document.getElementById("phone");
 
+  const roomSelect =
+    document.getElementById("roomSelect");
+
   const roomInput =
     document.getElementById("room");
+
+  const sourceInput =
+    document.getElementById("source");
+
+  const campaignInput =
+    document.getElementById("campaign");
+
+  const contentInput =
+    document.getElementById("content");
 
   const submitBtn =
     document.getElementById("submitBtn");
@@ -652,14 +704,6 @@
   const leadFrame =
     document.getElementById("leadFrame");
 
-  const sourceInput =
-    document.getElementById("source");
-
-  const campaignInput =
-    document.getElementById("campaign");
-
-  const contentInput =
-    document.getElementById("content");
 
   let submitted = false;
 
@@ -695,11 +739,15 @@
         nameInput.value.trim();
 
       const phone =
-        phoneInput.value.trim();
+        phoneDisplay.value.trim();
 
-      const room =
-        roomInput.value;
+      const selectedRoom =
+        roomSelect.value;
 
+
+      /*
+        VALIDATSIYA
+      */
 
       if (!name) {
 
@@ -711,7 +759,6 @@
         );
 
         return;
-
       }
 
 
@@ -725,11 +772,10 @@
         );
 
         return;
-
       }
 
 
-      if (!room) {
+      if (!selectedRoom) {
 
         event.preventDefault();
 
@@ -739,26 +785,34 @@
         );
 
         return;
-
       }
 
 
       /*
-        TELEFON FIX
-        +998 Google Sheetsda formula
-        bo‘lib ketmasligi uchun
+        TELEFONNI SHEETS UCHUN
+        TEXT QILIB YUBORAMIZ
       */
 
-      if (!phone.startsWith("'")) {
-
-        phoneInput.value =
-          "'" + phone;
-
-      }
+      phoneInput.value =
+        "'" + phone;
 
 
       /*
-        UTM PARAMETRLAR
+        XONADONNI HAM
+        TEXT FORMATDA YUBORAMIZ
+
+        1 -> '1 xonali
+        2 -> '2 xonali
+        3 -> '3 xonali
+        4 -> '4 xonali
+      */
+
+      roomInput.value =
+        "'" + selectedRoom;
+
+
+      /*
+        UTM
       */
 
       sourceInput.value =
@@ -774,7 +828,9 @@
       submitted = true;
 
 
-      submitBtn.disabled = true;
+      submitBtn.disabled =
+        true;
+
 
       submitBtn.textContent =
         "Yuborilmoqda...";
@@ -782,6 +838,7 @@
 
       message.className =
         "message";
+
 
       message.textContent =
         "";
@@ -811,7 +868,16 @@
       form.reset();
 
 
-      submitBtn.disabled = false;
+      phoneInput.value =
+        "";
+
+
+      roomInput.value =
+        "";
+
+
+      submitBtn.disabled =
+        false;
 
 
       submitBtn.textContent =
