@@ -651,7 +651,6 @@
 
 </main>
 
-
 <script>
 
   const form =
@@ -773,6 +772,19 @@
 
       }
 
+
+      /* TELEFON RAQAMI FIX */
+      /* Google Sheets +998 ni formula deb qabul qilmasligi uchun */
+
+      if (!phone.startsWith("'")) {
+
+        phoneInput.value =
+          "'" + phone;
+
+      }
+
+
+      /* UTM PARAMETRLAR */
 
       sourceInput.value =
         getUTM("utm_source") || "website";
