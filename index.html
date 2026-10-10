@@ -2,7 +2,10 @@
 <html lang="uz">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
 
   <title>Golden Lake — Mirobod tumanida Comfort Plus xonadonlar</title>
 
@@ -32,7 +35,8 @@
 
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--bg);
       color: var(--text);
     }
@@ -77,7 +81,7 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.08fr .92fr;
+      grid-template-columns: 1.08fr 0.92fr;
       gap: 34px;
       align-items: start;
     }
@@ -97,8 +101,8 @@
     h1 {
       margin: 0 0 24px;
       font-size: clamp(48px, 5.3vw, 78px);
-      line-height: .95;
-      letter-spacing: -.055em;
+      line-height: 0.95;
+      letter-spacing: -0.055em;
       max-width: 720px;
     }
 
@@ -112,7 +116,7 @@
       border-radius: 28px;
       min-height: 420px;
       background: #d7dce2;
-      box-shadow: 0 18px 50px rgba(33, 26, 16, .10);
+      box-shadow: 0 18px 50px rgba(33, 26, 16, 0.1);
     }
 
     .visual img {
@@ -132,7 +136,7 @@
       height: 46%;
       background: linear-gradient(
         transparent,
-        rgba(0, 0, 0, .54)
+        rgba(0, 0, 0, 0.54)
       );
       pointer-events: none;
     }
@@ -154,7 +158,7 @@
 
     .visual-copy span {
       font-size: 14px;
-      opacity: .9;
+      opacity: 0.9;
     }
 
     .stats {
@@ -188,18 +192,18 @@
     }
 
     .form-card {
-      background: rgba(255,255,255,.94);
+      background: rgba(255, 255, 255, 0.94);
       border: 1px solid var(--line);
       border-radius: 28px;
       padding: 26px;
-      box-shadow: 0 18px 55px rgba(43,31,13,.07);
+      box-shadow: 0 18px 55px rgba(43, 31, 13, 0.07);
     }
 
     .form-card h2 {
       margin: 0 0 6px;
       font-size: 28px;
       line-height: 1.08;
-      letter-spacing: -.03em;
+      letter-spacing: -0.03em;
     }
 
     .form-card .hint {
@@ -228,12 +232,12 @@
 
     input:focus {
       border-color: var(--gold);
-      box-shadow: 0 0 0 3px rgba(201,144,63,.12);
+      box-shadow: 0 0 0 3px rgba(201, 144, 63, 0.12);
     }
 
     .rooms {
       display: grid;
-      grid-template-columns: repeat(4,1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 8px;
       margin-top: 8px;
     }
@@ -277,7 +281,7 @@
     }
 
     .cta:disabled {
-      opacity: .6;
+      opacity: 0.6;
       cursor: not-allowed;
     }
 
@@ -413,7 +417,7 @@
       }
 
       .stats {
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
       }
 
       .stat {
@@ -430,7 +434,7 @@
       }
 
       .rooms {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
@@ -470,6 +474,7 @@
         />
 
         <div class="visual-copy">
+
           <strong>
             Miroboddagi zamonaviy yashash muhiti
           </strong>
@@ -477,6 +482,7 @@
           <span>
             Golden Lake · Toshkent
           </span>
+
         </div>
 
       </div>
@@ -512,7 +518,12 @@
         Ma’lumot olish uchun qisqa formani to‘ldiring.
       </p>
 
-      <form id="leadForm">
+      <form
+        id="leadForm"
+        action="https://script.google.com/macros/s/AKfycbwSBOCCXFArpgd0j4RD3DyCqXCCNY3DBKvwSDSt8N5GayPJAzMYS_PvWXl1kux6m78/exec"
+        method="POST"
+        target="leadFrame"
+      >
 
         <label for="name">
           Ismingiz
@@ -588,6 +599,27 @@
           value="1 xonali"
         />
 
+        <input
+          type="hidden"
+          id="source"
+          name="source"
+          value="website"
+        />
+
+        <input
+          type="hidden"
+          id="campaign"
+          name="campaign"
+          value=""
+        />
+
+        <input
+          type="hidden"
+          id="content"
+          name="content"
+          value=""
+        />
+
         <button
           class="cta"
           id="submitBtn"
@@ -607,16 +639,20 @@
 
       </form>
 
+      <iframe
+        name="leadFrame"
+        id="leadFrame"
+        style="display:none;"
+      ></iframe>
+
     </aside>
 
   </div>
 
 </main>
 
-<script>
 
-  const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbwSBOCCXFArpgd0j4RD3DyCqXCCNY3DBKvwSDSt8N5GayPJAzMYS_PvWXl1kux6m78/exec";
+<script>
 
   const form =
     document.getElementById("leadForm");
@@ -639,22 +675,42 @@
   const message =
     document.getElementById("message");
 
+  const leadFrame =
+    document.getElementById("leadFrame");
+
+  const sourceInput =
+    document.getElementById("source");
+
+  const campaignInput =
+    document.getElementById("campaign");
+
+  const contentInput =
+    document.getElementById("content");
+
+
+  let submitted = false;
+
+
   roomButtons.forEach(button => {
 
-    button.addEventListener("click", function () {
+    button.addEventListener(
+      "click",
+      function () {
 
-      roomButtons.forEach(btn => {
-        btn.classList.remove("active");
-      });
+        roomButtons.forEach(btn => {
+          btn.classList.remove("active");
+        });
 
-      this.classList.add("active");
+        this.classList.add("active");
 
-      roomInput.value =
-        this.dataset.room;
+        roomInput.value =
+          this.dataset.room;
 
-    });
+      }
+    );
 
   });
+
 
   function getUTM(parameter) {
 
@@ -667,6 +723,7 @@
 
   }
 
+
   function showMessage(text, type) {
 
     message.className =
@@ -677,11 +734,10 @@
 
   }
 
+
   form.addEventListener(
     "submit",
-    async function (event) {
-
-      event.preventDefault();
+    function (event) {
 
       const name =
         nameInput.value.trim();
@@ -689,10 +745,10 @@
       const phone =
         phoneInput.value.trim();
 
-      const room =
-        roomInput.value;
 
       if (!name) {
+
+        event.preventDefault();
 
         showMessage(
           "Iltimos, ismingizni kiriting.",
@@ -700,9 +756,13 @@
         );
 
         return;
+
       }
 
+
       if (!phone) {
+
+        event.preventDefault();
 
         showMessage(
           "Iltimos, telefon raqamingizni kiriting.",
@@ -710,100 +770,81 @@
         );
 
         return;
+
       }
 
-      const data =
-        new URLSearchParams();
 
-      data.append(
-        "name",
-        name
-      );
+      sourceInput.value =
+        getUTM("utm_source") || "website";
 
-      data.append(
-        "phone",
-        phone
-      );
+      campaignInput.value =
+        getUTM("utm_campaign");
 
-      data.append(
-        "room",
-        room
-      );
+      contentInput.value =
+        getUTM("utm_content");
 
-      data.append(
-        "source",
-        getUTM("utm_source") || "website"
-      );
 
-      data.append(
-        "campaign",
-        getUTM("utm_campaign")
-      );
+      submitted = true;
 
-      data.append(
-        "content",
-        getUTM("utm_content")
-      );
 
-      submitBtn.disabled = true;
+      submitBtn.disabled =
+        true;
 
       submitBtn.textContent =
         "Yuborilmoqda...";
 
-      message.className = "message";
 
-      message.textContent = "";
+      message.className =
+        "message";
 
-      try {
+      message.textContent =
+        "";
 
-        await fetch(
-          SCRIPT_URL,
-          {
-            method: "POST",
-            mode: "no-cors",
-            body: data
-          }
-        );
+    }
+  );
 
-        showMessage(
-          "Arizangiz qabul qilindi. Menejerimiz tez orada siz bilan bog‘lanadi.",
-          "success"
-        );
 
-        form.reset();
+  leadFrame.addEventListener(
+    "load",
+    function () {
 
-        roomButtons.forEach(btn => {
-          btn.classList.remove("active");
-        });
-
-        roomButtons[0]
-          .classList
-          .add("active");
-
-        roomInput.value =
-          "1 xonali";
-
+      if (!submitted) {
+        return;
       }
 
-      catch (error) {
 
-        console.error(error);
+      submitted = false;
 
-        showMessage(
-          "Arizani yuborishda xatolik yuz berdi.",
-          "error"
-        );
 
-      }
+      showMessage(
+        "Arizangiz qabul qilindi. Menejerimiz tez orada siz bilan bog‘lanadi.",
+        "success"
+      );
 
-      finally {
 
-        submitBtn.disabled = false;
+      form.reset();
 
-        submitBtn.textContent =
-          "Xonadon narxlari bilan tanishish →";
 
-      }
+      roomButtons.forEach(btn => {
+        btn.classList.remove("active");
+      });
+
+
+      roomButtons[0]
+        .classList
+        .add("active");
+
+
+      roomInput.value =
+        "1 xonali";
+
+
+      submitBtn.disabled =
+        false;
+
+
+      submitBtn.textContent =
+        "Xonadon narxlari bilan tanishish →";
 
     }
   );
