@@ -47,8 +47,6 @@
       margin: 0 auto;
     }
 
-    /* HEADER */
-
     header {
       height: 76px;
       display: flex;
@@ -73,8 +71,6 @@
       color: var(--gold);
     }
 
-    /* MAIN */
-
     main {
       padding: 14px 0 44px;
     }
@@ -85,8 +81,6 @@
       gap: 34px;
       align-items: start;
     }
-
-    /* OFFER */
 
     .offer-badge {
       display: inline-flex;
@@ -100,8 +94,6 @@
       margin-bottom: 18px;
     }
 
-    /* HEADLINE */
-
     h1 {
       margin: 0 0 24px;
       font-size: clamp(48px, 5.3vw, 78px);
@@ -113,8 +105,6 @@
     h1 .accent {
       color: var(--gold);
     }
-
-    /* HERO IMAGE */
 
     .visual {
       position: relative;
@@ -167,8 +157,6 @@
       opacity: .9;
     }
 
-    /* STATS */
-
     .stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -188,16 +176,16 @@
     }
 
     .stat b {
-      font-size: 24px;
-      margin-bottom: 3px;
+      font-size: 21px;
+      line-height: 1.05;
+      margin-bottom: 5px;
     }
 
     .stat span {
       color: var(--muted);
       font-size: 14px;
+      line-height: 1.25;
     }
-
-    /* FORM */
 
     .form-card {
       background: rgba(255,255,255,.94);
@@ -243,8 +231,6 @@
       box-shadow: 0 0 0 3px rgba(201,144,63,.12);
     }
 
-    /* ROOMS */
-
     .rooms {
       display: grid;
       grid-template-columns: repeat(4,1fr);
@@ -272,8 +258,6 @@
       color: #fff;
     }
 
-    /* CTA */
-
     .cta {
       width: 100%;
       border: none;
@@ -296,8 +280,6 @@
       opacity: .6;
       cursor: not-allowed;
     }
-
-    /* MESSAGE */
 
     .message {
       display: none;
@@ -331,10 +313,7 @@
       text-align: center;
     }
 
-    /* TABLET */
-
     @media (max-width: 860px) {
-
       .wrap {
         width: min(100% - 24px, 680px);
       }
@@ -386,7 +365,7 @@
       }
 
       .stat b {
-        font-size: 20px;
+        font-size: 18px;
       }
 
       .stat span {
@@ -403,10 +382,7 @@
       }
     }
 
-    /* MOBILE */
-
     @media (max-width: 460px) {
-
       .wrap {
         width: calc(100% - 20px);
       }
@@ -442,22 +418,21 @@
 
       .stat {
         padding: 10px 8px;
-        min-height: 82px;
+        min-height: 88px;
       }
 
       .stat b {
-        font-size: 17px;
+        font-size: 14px;
       }
 
       .stat span {
-        font-size: 11px;
+        font-size: 10px;
       }
 
       .rooms {
         grid-template-columns: repeat(2,1fr);
       }
     }
-
   </style>
 </head>
 
@@ -495,7 +470,6 @@
         />
 
         <div class="visual-copy">
-
           <strong>
             Miroboddagi zamonaviy yashash muhiti
           </strong>
@@ -503,7 +477,6 @@
           <span>
             Golden Lake · Toshkent
           </span>
-
         </div>
 
       </div>
@@ -511,18 +484,18 @@
       <div class="stats">
 
         <div class="stat">
-          <b>4.4 GA</b>
-          <span>maydon</span>
+          <b>4.4 GEKTAR</b>
+          <span>umumiy maydon</span>
         </div>
 
         <div class="stat">
-          <b>72%</b>
-          <span>infratuzilma</span>
+          <b>72% HUDUD</b>
+          <span>infratuzilmaga ajratilgan</span>
         </div>
 
         <div class="stat">
-          <b>Parking</b>
-          <span>yer ostida</span>
+          <b>YER OSTI PARKING</b>
+          <span>avtomobillar uchun</span>
         </div>
 
       </div>
@@ -645,7 +618,6 @@
   const SCRIPT_URL =
     "https://script.google.com/macros/s/AKfycbwSBOCCXFArpgd0j4RD3DyCqXCCNY3DBKvwSDSt8N5GayPJAzMYS_PvWXl1kux6m78/exec";
 
-
   const form =
     document.getElementById("leadForm");
 
@@ -667,7 +639,6 @@
   const message =
     document.getElementById("message");
 
-
   roomButtons.forEach(button => {
 
     button.addEventListener("click", function () {
@@ -685,7 +656,6 @@
 
   });
 
-
   function getUTM(parameter) {
 
     const params =
@@ -697,7 +667,6 @@
 
   }
 
-
   function showMessage(text, type) {
 
     message.className =
@@ -707,7 +676,6 @@
       text;
 
   }
-
 
   form.addEventListener(
     "submit",
@@ -724,7 +692,6 @@
       const room =
         roomInput.value;
 
-
       if (!name) {
 
         showMessage(
@@ -734,7 +701,6 @@
 
         return;
       }
-
 
       if (!phone) {
 
@@ -746,46 +712,38 @@
         return;
       }
 
-
       const data =
         new URLSearchParams();
-
 
       data.append(
         "name",
         name
       );
 
-
       data.append(
         "phone",
         phone
       );
-
 
       data.append(
         "room",
         room
       );
 
-
       data.append(
         "source",
         getUTM("utm_source") || "website"
       );
-
 
       data.append(
         "campaign",
         getUTM("utm_campaign")
       );
 
-
       data.append(
         "content",
         getUTM("utm_content")
       );
-
 
       submitBtn.disabled = true;
 
@@ -795,7 +753,6 @@
       message.className = "message";
 
       message.textContent = "";
-
 
       try {
 
@@ -808,25 +765,20 @@
           }
         );
 
-
         showMessage(
           "Arizangiz qabul qilindi. Menejerimiz tez orada siz bilan bog‘lanadi.",
           "success"
         );
 
-
         form.reset();
-
 
         roomButtons.forEach(btn => {
           btn.classList.remove("active");
         });
 
-
         roomButtons[0]
           .classList
           .add("active");
-
 
         roomInput.value =
           "1 xonali";
